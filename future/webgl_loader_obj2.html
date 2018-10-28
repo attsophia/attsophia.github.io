@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJLoader2 basic usage</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+		<style>
+
+			body {
+				font-family: 'Arial Narrow';
+				background-color: black;
+				color: black;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				border: none;
+/*				overflow: hidden;*/
+
+			}
+
+
+			* {
+
+  				cursor: url(cursor.png), auto;
+			}
+
+			::-moz-selection { 
+    		color: yellow;
+    		background: black;
+			}
+
+			::selection {
+    		color: yellow;
+    		background: black;
+			}
+
+
+/*			@font-face {
+			font-family: 'Portrait', 'PortraitCond-Regular';
+			src: url('PortraitCond-Regular.otf') format('opentype');
+			}*/
+
+			
+			#glFullscreen {
+				width: 100%;
+				height: 100vh;
+				min-width: 640px;
+				min-height: 360px;
+				position: relative;
+				overflow: hidden;
+				z-index: 0;
+			}
+
+			.marquee {
+				color: red;
+				font-size: 1.6vw;
+				position: fixed;
+				top: 1%;
+				z-index: 100;
+				width: 100%;
+			}
+
+
+			.blink {
+				width: 0.4vw;
+				height: 0.4vw;
+				background-color: red;
+ 				border-radius: 50%;
+ 				position: absolute;
+
+				top:0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+
+				animation:fade 1000ms infinite;
+    			-webkit-animation:fade 1000ms infinite;
+
+/*    			        moz-transition: all 1s ease-in-out;
+        o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        webkit-transition: all 1s ease-in-out;*/
+	
+			}
+
+
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}                                                                                                                                                                                                                                  
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+
+
+			#example {
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: black;
+				overflow: hidden;
+				position: fixed;
+			}
+
+/*			#feedback {
+				color: darkorange;
+			}*/
+			#dat {
+				user-select: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-Index: 200;
+				overflow: hidden;
+			}
+
+
+			#about {
+      			background-color: white;
+				color: black;
+      			border: black, 1px;
+      			font-size: 0.6vw;
+				z-index: 200;				
+				position: absolute;
+				top: 80%;
+				width: 100px;
+			}
+
+			#about:hover {
+    			background-color: #ebe9e9;
+			}
+
+
+			#abouttext {
+			display: block;
+			position: fixed;
+			width: 100%;
+			height: auto;
+			color: red;
+			font-size: 45px;
+			font-family: 'Times';
+/*	-webkit-text-fill-color: yellow;
+   -webkit-text-stroke-width: 1.5px;
+   -webkit-text-stroke-color: black;*/
+			background-color: #ebe9e9;
+  			border: 1px solid black;
+  			padding: 5px;
+
+			}
+
+
+  			.aboutsection {
+  			position: absolute;
+  			width: 100%;
+  			height: auto;
+  			top: 0px;
+  			overflow-y: hidden;
+  			overflow-x: scroll;
+  			display: none;
+  			z-index: 20000;
+			}
+
+			.aboutsection img {
+  			height: auto;
+  			display: block;
+			}
+
+
+
+
+		</style>
+
+	</head>
+
+	<body>
+
+
+
+
+		<div id="glFullscreen">
+			<canvas id="example"></canvas>
+		</div>
+
+		<div id="dat"></div>
+
+		<div class="marquee">
+
+<marquee direction="left">
+What are we longing for when we are caught by the sentiment of nostalgia? Is it a place that we are longing for? Or a time? Is the sentiment of nostalgia an act of rebellion in itself? Is it another way of standing against the modern idea of time? Is it the past you are longing for? Or is the actual unrealized dreams of the past? And where does tactility stand in the era of hyperconnectivity? Is there room for human interaction? Can we still imagine a cyberspace where you can evolve as an individual with your very own ambitions and interests while being part of an interconnected mesh?
+</marquee>
+
+		</div>
+
+
+		<div class=blink></div>
+
+		<div id="about">
+		<button id="about">what is this about?</button>
+		</div>
+
+		<div class="aboutsection">
+
+			<div id="abouttext">Past, present, past is a live performance and an interactive space installation to which is added this website. It is a sonic and tactile short journey into the spectrum of the dreamed of, the wished for and the longed for. </br></div>
+			
+			<div id="aboutimg">
+			<img id="connect" src="connect.jpg"/>	
+			<img id="connect2" src="connect2.jpg"/>
+			<img id="connect3" src="connect3.jpeg"/>
+			<img id="connect4" src="connect4.png"/>
+			<img id="connect5" src="connect5.jpg"/>
+			</div>
+
+		</div>
+
+		<div id="feedback"></div>
+
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<script src="js/Detector.js"></script>
+		<script src="../build/three.js"></script>
+		<script src="js/controls/TrackballControls.js"></script>
+		<script src="js/loaders/MTLLoader.js"></script>
+		<script src="js/libs/dat.gui.min.js"></script>
+
+		<script src="js/loaders/LoaderSupport.js"></script>
+		<script src="js/loaders/OBJLoader2.js"></script>
+		
+
+		<script>
+
+			$(function() {
+    $('marquee').mouseover(function() {
+        $(this).attr('scrollamount',0);
+    }).mouseout(function() {
+         $(this).attr('scrollamount',6);
+    });
+
+});
+
+
+			$(function(){
+				
+				$("#abouttext").click(function(){
+					
+					$("#abouttext").hide();
+					
+				});
+				
+			});
+
+			$(function(){
+				
+				$("#aboutimg").click(function(){
+					
+					$("#aboutimg").hide();
+					
+				});
+				
+			});
+
+			$(function(){
+				
+				$("#about").click(function(){
+					
+					$(".aboutsection").show();
+					
+				});
+				
+			});		
+
+
+// $(window).scroll(function(){
+//   var boxje = $(".blink").offset().top;
+//   var value = 400;
+//     if (boxje>value) {
+//       $(".blink").css({"display":"none"});
+//     } else {
+//       $(".blink").css({"display":"initial"});
+//     }
+// });
+
+			'use strict';
+
+			var OBJLoader2Example = (function () {
+
+				var Validator = THREE.LoaderSupport.Validator;
+
+				function OBJLoader2Example( elementToBindTo ) {
+					this.renderer = null;
+					this.canvas = elementToBindTo;
+					this.aspectRatio = 1;
+					this.recalcAspectRatio();
+
+					this.scene = null;
+					this.cameraDefaults = {
+						posCamera: new THREE.Vector3( 0.0, 175.0, 12000.0 ),
+						posCameraTarget: new THREE.Vector3( 0, 0, 0 ),
+						near: 0.1,
+						far: 10000,
+						fov: 45
+					};
+					this.camera = null;
+					this.cameraTarget = this.cameraDefaults.posCameraTarget;
+
+					this.controls = null;
+				}
+
+				OBJLoader2Example.prototype.initGL = function () {
+					this.renderer = new THREE.WebGLRenderer( {
+						canvas: this.canvas,
+						antialias: true,
+						autoClear: true
+					} );
+					this.renderer.setClearColor( 0x050505 );
+
+					this.scene = new THREE.Scene();
+
+					this.camera = new THREE.PerspectiveCamera( this.cameraDefaults.fov, this.aspectRatio, this.cameraDefaults.near, this.cameraDefaults.far );
+					this.resetCamera();
+					this.controls = new THREE.TrackballControls( this.camera, this.renderer.domElement );
+
+					var ambientLight = new THREE.AmbientLight( 0x404040 );
+					var directionalLight1 = new THREE.DirectionalLight( 0xC0C090 );
+					var directionalLight2 = new THREE.DirectionalLight( 0xC0C090 );
+
+					directionalLight1.position.set( -100, -50, 100 );
+					directionalLight2.position.set( 100, 50, -100 );
+
+					this.scene.add( directionalLight1 );
+					this.scene.add( directionalLight2 );
+					this.scene.add( ambientLight );
+
+					// var helper = new THREE.GridHelper( 1200, 60, 0xFF4444, 0x404040 );
+					// this.scene.add( helper );
+				};
+
+				OBJLoader2Example.prototype.initContent = function () {
+					var modelName = 'floppy';
+					this._reportProgress( { detail: { text: 'Loading: ' + modelName } } );
+
+					var scope = this;
+					var objLoader = new THREE.OBJLoader2();
+					var callbackOnLoad = function ( event ) {
+						scope.scene.add( event.detail.loaderRootNode );
+						console.log( 'Loading complete: ' + event.detail.modelName );
+						scope._reportProgress( { detail: { text: '' } } );
+					};
+
+					var onLoadMtl = function ( materials ) {
+						objLoader.setModelName( modelName );
+						objLoader.setMaterials( materials );
+						objLoader.setLogging( true, true );
+						objLoader.load( 'models/obj/female02/floppy.obj', callbackOnLoad, null, null, null, false );
+					};
+					objLoader.loadMtl( 'models/obj/female02/floppy.mtl', null, onLoadMtl );
+				};
+
+				OBJLoader2Example.prototype._reportProgress = function( event ) {
+					var output = Validator.verifyInput( event.detail.text, '' );
+					console.log( 'Progress: ' + output );
+					document.getElementById( 'feedback' ).innerHTML = output;
+				};
+
+				OBJLoader2Example.prototype.resizeDisplayGL = function () {
+					this.controls.handleResize();
+
+					this.recalcAspectRatio();
+					this.renderer.setSize( this.canvas.offsetWidth, this.canvas.offsetHeight, false );
+
+					this.updateCamera();
+				};
+
+				OBJLoader2Example.prototype.recalcAspectRatio = function () {
+					this.aspectRatio = ( this.canvas.offsetHeight === 0 ) ? 1 : this.canvas.offsetWidth / this.canvas.offsetHeight;
+				};
+
+				OBJLoader2Example.prototype.resetCamera = function () {
+					this.camera.position.copy( this.cameraDefaults.posCamera );
+					this.cameraTarget.copy( this.cameraDefaults.posCameraTarget );
+
+					this.updateCamera();
+				};
+
+				OBJLoader2Example.prototype.updateCamera = function () {
+					this.camera.aspect = this.aspectRatio;
+					this.camera.lookAt( this.cameraTarget );
+					this.camera.updateProjectionMatrix();
+				};
+
+				OBJLoader2Example.prototype.render = function () {
+					if ( ! this.renderer.autoClear ) this.renderer.clear();
+					this.controls.update();
+					this.renderer.render( this.scene, this.camera );
+				};
+
+
+				// OBJLoader2Example.prototype.render = function () {
+				// 	if ( ! this.renderer.autoClear ) this.renderer.clear();
+
+				// 	this.controls.update();
+
+				// 	this.cube.rotation.x += 0.001;
+				// 	this.cube.rotation.y += 0.001;
+
+				// 	this.renderer.render( this.scene, this.camera );
+				// };
+
+
+				return OBJLoader2Example;
+
+			})();
+
+			var app = new OBJLoader2Example( document.getElementById( 'example' ) );
+
+			var resizeWindow = function () {
+				app.resizeDisplayGL();
+			};
+
+			var render = function () {
+				requestAnimationFrame( render );
+				app.render();
+			};
+
+			window.addEventListener( 'resize', resizeWindow, false );
+
+			console.log( 'Starting initialisation phase...' );
+			app.initGL();
+			app.resizeDisplayGL();
+			app.initContent();
+
+			render();
+	
+
+
+
+
+
+
+		</script>
+
+	</body>
+
+</html>

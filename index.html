@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+		<script>
+
+		$( function( ) {
+			var canvas = $( '#wrapper' );
+			var canvas_wdt = canvas.width( );
+			var canvas_hgt = canvas.height( );
+			var balls = $( '.ball' );
+
+			function updateBall( ) {
+				var ball = $( this );
+
+				var data = ball.data( );
+				var coords = ball.position( );
+
+				var next_x = coords.left + data.dir_x;
+				if ( next_x <= 0 || next_x >= canvas_wdt - ball.width( ) ) 
+					data.dir_x *= -1;
+
+				var next_y = coords.top + data.dir_y;
+				if ( next_y <= 0 || next_y >= canvas_hgt - ball.height( ) ) 
+					data.dir_y *= -1;
+
+				ball.data( data )
+					.css( { 'top': next_y, 'left': next_x } );
+				
+			}
+			function updateBalls( ) {
+				balls.each( updateBall );
+			}
+
+			function initBall( ) {
+				var ball = $( this );
+
+				var wdt = ball.width( );
+				var hgt = ball.height( );
+
+				var dir_x = 1 
+				var dir_y = 1 
+
+// RANDOM SPEED BETWEEN 1 AND 19
+// 				var dir_x = 1 + Math.random( ) * 19;
+// 				var dir_y = 1 + Math.random( ) * 19;
+
+
+				ball.data( { 'dir_x': dir_x, 'dir_y': dir_y } )
+					.css( { 'top': Math.floor( Math.random( ) * ( canvas_hgt - hgt ) ),
+							'left': Math.floor( Math.random( ) * ( canvas_wdt - wdt ) ) } );
+			}
+			function initBalls( ) {
+				balls.each( initBall );
+
+				setInterval( updateBalls, 10);
+			}
+
+			initBalls( );
+
+			$( window ).resize( function( ) {
+				canvas_wdt = canvas.width( );
+				canvas_hgt = canvas.height( );
+			} );
+		} );
+
+
+
+    $(document).ready(function() {   
+
+
+			$(function(){
+				
+				$("#work").click(function(){
+					
+					$(".workmenu").toggle();
+					
+				});
+			
+				
+				$("#about").click(function(){
+					
+					$(".aboutmenu").toggle();
+					
+				});
+				
+				
+				$("#contact").click(function(){
+					
+					$(".contactmenu").toggle();
+					
+				});
+
+				
+				$("#more").click(function(){
+					
+					$(".moremenu").toggle();
+					
+				});
+				
+			});
+
+
+    });
+
+		</script>
+
+	</head>
+
+	<body>
+
+
+<!-- 		<div id="section-13">
+			<div class="wrapper1">
+
+				<div class="font-change">
+					<span>hello</span>
+				</div>
+			</div>
+
+		</div> -->
+
+
+
+	<div id="wrapper">
+
+		<div class="ball">
+			<img id="home" img src="images/home.svg"></div>
+		</div>
+
+		<div class="ball2">
+			<img id="home" img src="images/home2.svg"></div>
+		</div>
+
+<!-- 		<div class="ball"></div>
+		<div class="ball"></div>
+		<div class="ball"></div>
+		<div class="ball"></div>
+		<div class="ball"></div>
+		<div class="ball"></div> -->
+	</div>
+
+		<div class="floatingmenu">
+
+			
+			<div id="work"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">work</span></div>
+			
+			<div id="about"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">about</span></div>
+			
+			<div id="contact"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">contact</span></div>			
+
+			<div id="more"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">more</span></div>
+
+
+		</div>
+
+<!-- 		<div class="marquee">
+
+		<marquee direction="down" width="100%" height="100%" behavior="alternate" scrollamount="10" margin=0>
+  		<marquee behavior="alternate">
+    		Sophia Attigui's personal web page
+  		</marquee>
+		</marquee>
+
+		</div>
+ -->
+
+ <FRAMESET cols="30%">
+
+		<div class="submenu">
+			
+			<div class="workmenu">
+				
+				<p>
+
+				<div id="eleven"><a href="pastpresentpast.html">11. Past, present, past</a></div>
+
+				<div id="ten"><a href="corrupted.html">10. Corrupted space</a></div>
+
+				<div id="nine"><a href="justanotherway.html">09. Just another way to say it</a></div>
+
+				<div id="eight"><a href="womeninart.html">08. Women in art (school)</a></div>
+
+				<div id="seven"><a href="fearEU.html">07. Fear and loathing in the EU</a></div>
+
+				<div id="six"><a href="beenthinking.html">06. I've been thinking</a></div>
+
+				<div id="five"><a href="hall.html">05. The Work of Representation</a></div>
+
+				<div id="four"><a href="served.html">04. Served aside</a></span></div>
+
+				<div id="three"><a href="oknotok.html">03. Iran: ok, not ok</a></span></div>
+
+				<div id="two"><a href="notavailable.html">02. Not available festival</a></div>
+
+				<div id="one"><a href="bjork.html">01. An homage: All is full of Love</a></div>
+
+
+
+				</p>
+
+			</div>
+
+
+			<div class="aboutmenu">
+
+				<p>Sophia Attigui (b. 1993, <a href="https://www.google.com/maps/place/Casablanca,+Morocco/@33.5720635,-7.6574287,12z/data=!3m1!4b1!4m5!3m4!1s0xda7cd4778aa113b:0xb06c1d84f310fd3!8m2!3d33.5731104!4d-7.5898434" target="_blank">Casablanca</a>) is a designer developing a research-based practice mainly focused on technology, culture, cybernetics, politics and the perception we build upon those matters. Currently residing in <a href="https://www.google.fr/maps/place/Bruxelles,+Belgique/@50.8549541,4.3053509,12z/data=!3m1!4b1!4m5!3m4!1s0x47c3a4ed73c76867:0xc18b3a66787302a7!8m2!3d50.8503396!4d4.3517103" target="_blank">Brussels</a>.
+
+				<br></br>
+				Education: 
+				<br>Kask School of Arts, Gent <sup>(BE)</sup></br>
+				Royal Academy of Art, Kabk, The Hague <sup>(NL)</sup> 
+				<br>Ecole de Recherche Graphique, Brussels <sup>(BE)</sup></br>
+				Université Paris VIII Vincennes Saint-Denis, Paris <sup>(FR)</sup>
+				</p>
+
+			</div>
+
+			<div class="contactmenu">
+
+				<p>Available for freelance services, collaborations and casual chats at:
+				<a href="mailto:hi@sophiaattigui.com" target="_blank">sophia.attigui@gmail.com</p>
+			
+			</div>
+
+			<div class="moremenu">
+				
+				<p>
+
+				<a href="https://www.instagram.com/atsophia" target="_blank">IRL ♨</a> 
+				<br><a href="https://www.vkntmoodboard.tumblr.com" target="_blank">Blog</a></br>
+				<a href="things.html" target="_blank">Things</a>
+				<br><a href="mail.html" target="_blank">Subscribe to the mailing list</a></br>
+<!-- 				<a href="guestbook.html" target="_blank">Guestbook</br></a> -->
+
+
+				</p>
+
+			</div>
+
+
+		</div>
+
+
+</FRAMESET>
+
+<!-- 
+<script>
+
+
+
+		$( function( ) {var e=Array("Georgia","Times New Roman","Arial Black","Impact","Courier New","Verdana","Lucida Console","Comic Sans MS");t(".font-change").on("click",function(){var i=e[Math.floor(Math.random()*e.length)];t(this).css("font-family",i)})}
+
+</script> -->
+
+	</body>

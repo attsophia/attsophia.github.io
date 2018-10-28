@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+    		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    		<meta name="HandheldFriendly" content="true">
+
+
+<body class="bjork">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="notavailable.html">previous project</a></div>
+
+
+			</div>
+
+
+			<div class="bjork-information">
+
+					An homage: All is full of Love
+					<div id="technicalinfo"><i>Pigmented paint on wall (6mx3m20), video<br>2017</i></br></div>
+					<div id="text">A mural part of a lot more murals paying tribute to important figures in popular culture in the Royal Academy of Art’s gallery subsequent to a school trip to Iran held in the framework of an ornamental research course, and a video following a similar pattern system.</div>
+
+			</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+
+			<div class="bjorkvisuals">
+	
+<video width="100%" height="auto" controls>
+  <source src="images/allisfulloflove.mp4" type="video/mp4">
+  <source src="images/allisfulloflove.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+          <img id="bjork1" src="images/bjork1.jpg"/>
+          <img id="bjork2" src="images/bjork2.jpg"/>
+          <img id="bjork3" src="images/bjork3.jpg"/>
+          <img id="bjork4" src="images/bjork4.jpg"/>
+
+          <img id="mural" src="images/mural.jpg"/>
+
+			</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var bjorkvisuals = $('.bjorkvisuals');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: bjorkvisuals.offset().top,
+                                bottom: bjorkvisuals.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corrupted').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

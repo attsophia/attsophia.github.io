@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+		    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+
+<body class="womeninart">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="justanotherway.html">previous project</a></div>
+
+					<div id="next"><a href="fearEU.html">next project</a></div>
+
+			</div>
+
+
+			<div class="womeninartinformation">
+
+					Women in art (school)
+					<div id="technicalinfo"><i>594x841mm<br>2018</i></br></div>
+					<div id="text">Series of posters part of a campaign held at the Royal Academy of Art aiming to point out the lack of visibility of female artists in art education – the poster is laminated and enables the audience to add content to one's liking.</div>
+
+			</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+
+			<div class="womeninartposters">
+	
+					<img id="women1" src="images/women1.jpg"/>
+          <img id="women2" src="images/women2.jpg"/>
+
+			</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var womeninartposters = $('.womeninartposters');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: womeninartposters.offset().top,
+                                bottom: womeninartposters.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corrupted').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

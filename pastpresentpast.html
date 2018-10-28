@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+		    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+
+
+<body class="pastpresentpast">
+	
+			
+
+	<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="next"><a href="corrupted.html">next project</a></div>
+
+			</div>
+
+
+			<div class="pastpresentpastinformation">
+
+					Past Present Past
+					<div id="technicalinfo"><i><a href="future/index.html" target="_blank">Open website in a new window</a><br>2018</i></br></div>
+					<div id="text">Past, present, past is a live performance and an interactive space installation to which is added this website. It is a sonic and tactile short journey into the spectrum of the dreamed of, the wished for and the longed for.</div>
+
+			</div>
+
+	</div>
+
+
+					<div id="dragbar"></div>
+
+
+<!-- <frameset rows="*,91%">
+
+<frame src="../form/index.html">
+
+</frameset> -->
+
+<!-- 			<div class="pppwebsite">
+	
+					<iframe src="future/index.html" height="100%" width="100%" frameborder="0"></iframe>	
+
+			</div> -->
+
+            <div class="pppvisuals">
+  
+  <img id="ppp1" src="images/ppp1.png"/>
+  <img id="ppp2" src="images/ppp2.png"/>
+  <img id="ppp3" src="images/ppp3.png"/>
+  <img id="ppp4" src="images/ppp4.png"/>
+  <img id="ppp5" src="images/ppp5.png"/>
+
+
+</div>
+
+
+</body>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var pppwebsite = $('.pppwebsite');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: pppwebsite.offset().top,
+                                bottom: pppwebsite.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.pppwebsite').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

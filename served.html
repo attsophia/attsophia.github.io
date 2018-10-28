@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.3/dist/interact.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+
+		<script>
+
+
+interact('#carrot, #eggplant, #potato, #tomato, #tomato2, #tomato3, #tomato4, #lentilles, #onion, #onion2, #onion3, #onion4, #mauve, #orange, #redonion, #redonion2, #lemon, #lemon2, #beet, #pepper, #pepper2, #lamb, #cucumber, #bean, #olive, #olive2, #olive3, #herb, #herb2, #herb3, #herb4, #herb5, #salt, #salt2, #salt3')
+  .draggable({
+
+    autoScroll: true,
+
+    onmove: dragMoveListener,
+
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                     Math.pow(event.pageY - event.y0, 2) | 0))
+            .toFixed(2) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+
+  window.dragMoveListener = dragMoveListener;
+
+
+
+
+		</script>
+
+
+<body class="served">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="hall.html">previous project</a></div>
+
+					<div id="next"><a href="oknotok.html">next project</a></div>
+
+			</div>
+
+
+    <div class="servedinformation">
+      
+Served aside
+<div id="technicalinfo"><i>205x205mm<br>2018</i></br></div>
+<div id="text">Set of cards introducing a dozen traditional moroccan side meals. Echoing the instinctive aspect of the north african and middle eastern cuisine, and the intimacy that is to be engaged with each dish, the set ignores the usual quasi scientific approach to meal preparation and leaves room for deviation and experimentation.</div>
+	
+
+	</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+								
+								<div class="servedwrapper">
+
+
+<img id="servedimg" src="images/served.png"/>
+<img id="servedposter" src="images/servedposter.png"/>
+
+                </div>
+
+		
+		<div class="icons">
+<img id="carrot" src="images/carrot.png"/>
+<img id="eggplant" src="images/eggplant.png"/>
+<img id="potato" src="images/potato.png"/>
+<img id="tomato" src="images/tomato.png"/>
+<img id="tomato2" src="images/tomato.png"/>
+<img id="tomato3" src="images/tomato.png"/>
+<img id="tomato4" src="images/tomato.png"/>
+<img id="lentilles" src="images/lentilles.png"/>
+<img id="onion" src="images/onion.png"/>
+<img id="onion2" src="images/onion.png"/>
+<img id="onion3" src="images/onion.png"/>
+<img id="onion4" src="images/onion.png"/>
+<img id="mauve" src="images/mauve.png"/>
+<img id="orange" src="images/orange.png"/>
+<img id="redonion" src="images/echalot.png"/>
+<img id="redonion2" src="images/echalot.png"/>
+<img id="lemon" src="images/lemon.png"/>
+<img id="lemon2" src="images/lemon.png"/>
+<img id="beet" src="images/beet.png"/>
+<img id="pepper" src="images/pepper.png"/>
+<img id="pepper2" src="images/pepper2.png"/>
+<img id="lamb" src="images/lamb.png"/>
+<img id="cucumber" src="images/cucumber.png"/>
+<img id="bean" src="images/bean.png"/>
+<img id="olive" src="images/olive.png"/>
+<img id="olive2" src="images/olive.png"/>
+<img id="olive3" src="images/olive.png"/>
+<img id="herb" src=".images/herb.png"/>
+<img id="herb2" src="images/herb.png"/>
+<img id="herb3" src="images/herb.png"/>
+<img id="herb4" src="images/herb.png"/>
+<img id="herb5" src="images/herb.png"/>
+<img id="salt" src="images/salt.png"/>
+<img id="salt2" src="images/salt.png"/>
+<img id="salt3" src="images/salt.png"/>
+		</div>	
+
+						
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var servedwrapper = $('.servedwrapper');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: servedwrapper.offset().top,
+                                bottom: servedwrapper.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.servedwrapper').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

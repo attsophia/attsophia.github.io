@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+
+<body class="justanotherway">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="corrupted.html">previous project</a></div>
+
+					<div id="next"><a href="womeninart.html">next project</a></div>
+
+			</div>
+
+
+			<div class="justanotherway-information">
+
+Just another way to say it
+<div id="technicalinfo"><i>182x257mm<br>2018</i></br></div>
+<div id="text">Alongside the printed page, written language is represented in various forms. Public space is filled with messages of all kinds written by the individuals that inhabit it. Through these interventions of self-expression, different forms of written and oral language have been born that go unaccounted for in the history of communication. Each of these methods has its own formal and conceptual qualities, as well as its own history and background. These tools represent an untold history of graphic design that has existed and developed alongside the popular communication tools of print publishing, radio, television and the internet. 
+The present book is a compilation of the most subjective compendium of analog communication tools to date from a historical and cultural point of view, as it is browsing significant events in human history and bringing to light cultural traditions from all over the world.</div>
+
+			</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+<div class="justanotherwayvisuals">
+	
+	<img id="justanotherway1" src="images/justanother1.jpg"/>
+	<img id="justanotherway2" src="images/justanother2.jpg"/>
+	<img id="justanotherway3" src="images/justanother3.jpg"/>
+
+
+</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var justanotherwayvisuals = $('.justanotherwayvisuals');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: justanotherwayvisuals.offset().top,
+                                bottom: justanotherwayvisuals.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.justanotherwayvisuals').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

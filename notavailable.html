@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+
+<HTML>
+
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+		<script>
+
+
+    $(document).ready(function() {   
+
+
+			$(function(){
+				
+
+
+	var currentslide = 0;
+// put your images and descriptions here
+var slides = [
+  // this is the first image +  description
+  {
+    "image": "images/post1.jpg",
+  },
+  // the first image +  description ends here
+  {
+    "image": "images/post2.jpg",
+  },
+  {
+    "image": "images/post3.jpg",
+  },
+];
+
+
+// when you click the right arrow
+$("#slide").click(function(){
+  // go one slide to the right
+  currentslide = currentslide + 1;
+
+  // when we are at the end of the list, go to the start
+  if (currentslide > slides.length-1) {
+    currentslide = 0;
+  }
+
+  // show the current image
+  $("#slide img").attr("src", slides[ currentslide ].image );
+
+
+});				
+				});
+
+    });
+
+
+
+
+        $(document).ready(function() {   
+
+
+			$(function(){
+				
+
+
+	var currentslide = 0;
+// put your images and descriptions here
+var slides = [
+  // this is the first image +  description
+  {
+    "image": "images/post2.jpg",
+  },
+  // the first image +  description ends here
+  {
+    "image": "images/post3.jpg",
+  },
+  {
+    "image": "images/post1.jpg",
+  },
+];
+
+
+// when you click the right arrow
+$("#slide2").click(function(){
+  // go one slide to the right
+  currentslide = currentslide + 1;
+
+  // when we are at the end of the list, go to the start
+  if (currentslide > slides.length-1) {
+    currentslide = 0;
+  }
+
+  // show the current image
+  $("#slide2 img").attr("src", slides[ currentslide ].image );
+
+
+});				
+				});
+
+    });
+
+
+
+        $(document).ready(function() {   
+
+
+			$(function(){
+				
+
+
+	var currentslide = 0;
+// put your images and descriptions here
+var slides = [
+  // this is the first image +  description
+  {
+    "image": "images/post3.jpg",
+  },
+  // the first image +  description ends here
+  {
+    "image": "images/post1.jpg",
+  },
+  {
+    "image": "images/post2.jpg",
+  },
+];
+
+
+// when you click the right arrow
+$("#slide3").click(function(){
+  // go one slide to the right
+  currentslide = currentslide + 1;
+
+  // when we are at the end of the list, go to the start
+  if (currentslide > slides.length-1) {
+    currentslide = 0;
+  }
+
+  // show the current image
+  $("#slide3 img").attr("src", slides[ currentslide ].image );
+
+
+});				
+				});
+
+    });
+
+
+		</script>
+
+	</head>
+
+
+
+
+
+	<body class = "notavailable">
+
+
+
+	<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="oknotok.html">previous project</a></div>
+
+          <div id="next"><a href="bjork.html">next project</a></div>
+
+
+			</div>
+
+
+			<div class="notavailable-information">
+
+Not available festival
+<div id="technicalinfo"><i>Declined identity on various mediums<br>2016</i></br></div>
+<div id="text">Fictional multidisciplinary festival that takes as its starting point the problematisation of the often encountered internet notification ‘‘content not available in your country’’: how are
+geographical boundaries embodied within a space that once was acclaimed precisely for its borderless aspects? How are states paradoxically excercising more and more their soverignty on the cyberspace? And how is that symptomatic of the current societal malaise? The n/a festival interogates the myth of the borderless world in the present context and aims to elevate the debate of the borders, of any nature, from a cultural and aesthetical approach, by operating as a forum and implementing a space for dialogue and expression, hosting a series of acts, live performances, art displays, film screenings and workshops.</div>
+
+			</div>
+
+	</div>
+
+
+					<div id="dragbar"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="notavailablevisuals">
+	
+	<img id="notavailable1" src="images/notavailable1.jpg"/>	
+
+</div>
+
+
+
+<div class="allslideshows">
+
+
+  <div class="slideshow">
+
+    <div class="content">
+
+      <div class="slide" id="slide">
+        <img src="images/post1.jpg"/>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="slideshow2">
+
+    <div class="content2">
+
+      <div class="slide2" id="slide2">
+        <img src="images/post2.jpg"/>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="slideshow3">
+
+    <div class="content3">
+
+      <div class="slide3" id="slide3">
+        <img src="images/post3.jpg"/>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div class="notavailablevisuals3">
+
+	<img id="notavailable3" src="images/notavailable3.jpg"/>
+
+</div>
+
+
+
+
+
+
+	</body>
+
+
+	<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var notavailablevisuals = $('.notavailablevisuals');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: notavailablevisuals.offset().top,
+                                bottom: notavailablevisuals.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corruptedposters').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>
+
+
+
+</html>

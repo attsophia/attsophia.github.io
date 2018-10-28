@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+    		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    		<meta name="HandheldFriendly" content="true">
+
+
+<body class="beenthinking">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+					<div id="previous"><a href="fearEU.html">previous project</a></div>
+          <div id="next"><a href="hall.html">next project</a></div>
+
+
+			</div>
+
+
+			<div class="beenthinking-information">
+
+					I've been thinking
+					<div id="technicalinfo"><i>Performance, video<br>2017</i></br></div>
+					<div id="text">A poem about the internet, performed while facing both the screen and the audience.</div>
+
+			</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+
+			<div class="beenthinkingvisuals">
+	
+<video width="100%" height="auto" controls>
+  <source src="images/beenthinking.mp4" type="video/mp4">
+  <source src="images/beenthinking.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+
+			</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var beenthinkingvisuals = $('.beenthinkingvisuals');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: beenthinking.offset().top,
+                                bottom: beenthinking.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corrupted').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

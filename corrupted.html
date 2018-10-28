@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+    		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    		<meta name="HandheldFriendly" content="true">
+
+
+<body class="corrupted">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="previous"><a href="pastpresentpast.html">previous project</a></div>
+
+					<div id="next"><a href="justanotherway.html">next project</a></div>
+
+			</div>
+
+
+			<div class="corruptedinformation">
+
+					Corrupted space
+					<div id="technicalinfo"><i>594x841mm<br>2018</i></br></div>
+					<div id="text">Series of posters commissioned by the interior architecture department of the Royal Academy of Art for a lecture held by German artist and urban guide Boris Sievert. The material is somehow or other a depiction of movement in a given space.</div>
+
+			</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+
+			<div class="corruptedposters">
+	
+					<img id="corrupted1" src="images/corrupted1.jpg"/>
+					<img id="corrupted2" src="images/corrupted2.jpg"/>
+					<img id="corrupted3" src="images/corrupted3.jpg"/>
+					<img id="corrupted4" src="images/corrupted4.jpg"/>
+					<img id="corrupted5" src="images/corrupted5.jpg"/>	
+
+			</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var corrupted = $('.corrupted');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: corrupted.offset().top,
+                                bottom: corrupted.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corrupted').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>

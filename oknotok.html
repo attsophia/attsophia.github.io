@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+<body class="oknotok">
+			
+
+
+					<div class="information">
+
+
+			<div class="navigation">
+
+		<div id="home"><a href="index.html" target="_top">home</a></div>
+
+		<div id="previous"><a href="served.html" target="_parent">previous project</a></div>
+
+		<div id="next"><a href="notavailable.html" target="_parent">next project</a></div>
+
+			</div>
+
+
+		<div class="oknotokinformation">
+Iran: ok, not ok
+<div id="technicalinfo"><i>182x257mm<br>2018</i></br></div>
+<div id="text">A handbook conceived for classmates prior to a school-trip to Iran from the Royal Academy of Art KABK The Hague.</div>
+		</div>
+
+					</div>
+
+
+					<div id="dragbar"></div>
+
+	
+<div class="oknotokvisuals">
+	
+	<img id="oknotok1" src="images/oknotok1.jpg"/>
+	<img id="oknotok2" src="images/oknotok2.jpg"/>
+	<img id="oknotok3" src="images/oknotok3.jpg"/>
+	<img id="oknotok4" src="images/oknotok4.jpg"/>
+	<img id="oknotok5" src="images/oknotok5.jpg"/>
+
+
+</div>
+
+
+
+</BODY>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var oknotokvisuals = $('.oknotokvisuals');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: oknotokvisuals.offset().top,
+                                bottom: oknotokvisuals.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.woknotokvisuals').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+
+</html>
