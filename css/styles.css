@@ -449,6 +449,70 @@ background-color: #e6e6e6;
 
 /*info for projects ends here*/
 
+/*thesis project starts here*/
+
+
+.thesis {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	background-color: #f1f1f1;
+	z-index: 0;
+	margin: 0;
+}
+
+.thesisinformation {
+	width: 80%;
+	padding: 10px;
+}
+
+	@media screen and (max-width: 450px) {
+    .thesisinformation {
+	font-size: 17px;
+    }
+
+    }
+
+   	@media screen and (max-width: 750px) {
+    #thesistitle {
+	width: 70%;
+    }
+
+    }
+
+
+.thesiscontent {
+	background-color: white;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 10000;
+	height: auto;
+	width: 100%;
+}
+
+.thesiscontent p {
+	width: 70%;
+	padding: 15px;
+	padding-left: 30px;
+	height: auto;
+	color: black;
+	font-size: 32px;
+}
+
+	@media screen and (max-width: 450px) {
+    .thesiscontent p {
+	font-size: 24px;
+	width: auto;
+    }
+
+    }
+
+
+/*thesis project ends here*/
+
+
 /*past present past project starts here*/
 
 
@@ -534,7 +598,7 @@ background-color: #e6e6e6;
     .corruptedposters img {
         width: 100%;
         background-position: center;
-        padding-right: 5px;
+        margin-right: 5px;
     }
 
 }

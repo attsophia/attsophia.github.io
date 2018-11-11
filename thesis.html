@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<script src="jquery.min.js"></script>
+		<script src="three.js"></script>
+		    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+
+
+<body class="thesis">
+	
+			
+
+	<div class="information">
+
+
+			<div class="navigation">
+
+					<div id="home"><a href="index.html">home</a></div>
+
+					<div id="next"><a href="pastpresentpast.html">next project</a></div>
+
+			</div>
+
+
+			<div class="thesisinformation">
+
+					<div id="thesistitle">Text may contain: time, space, utopia, nostalgia and one or more people.</div>
+					<div id="technicalinfo"><i>Masters thesis<br>2018</i></br></div>
+					<div id="text">As I am exploring concepts of time, space and form and developing new work methodologies, you can have access to my thesis while it is being written. 
+          <br>This thesis is now part of the public space and may be subject to any sort of reappropriation. Please feel free to get imbued by these words. To upgrade them or redesign them. To distort them or pervert them.</div>
+
+			</div>
+
+	</div>
+
+
+			<div id="dragbar"></div>
+
+
+      <div class="thesiscontent">
+        
+<p>
+
+This is how it all starts.
+<br>
+<br>
+Let’s begin by setting the context.
+<br>
+You are a conscious being, surrounded by analog beings, or objects. Although this can be argued, all is very tangible. These things are part of what you consider the real world, or the world filtered through your fives senses.
+<br>
+This is the meatspace. 
+<br>
+Yet, the screen you are facing and through which you are reading those lines does not only exist as a physical object, it happens to also be a window to allow an entry to another kind of space. This space does not have any kind of form or physical substance, yet it does exist. 
+<br>
+This is the cyberspace.
+<br>
+Those windows to that other ‘placeless place’ may be described as similar on certain degrees to Foucault’s examination of mirrors. Mirrors are palpable visual devices that hold within them a virtual space, as they involve a complex play of gaze and place the viewer in a suspended state of being simultaneously visible and concealed, here and there, included and excluded.
+<br>
+Is the internet itself a mirror? As a projection of fantasized real life or is the screen itself a mirror that blurs the lines between real and virtual space?
+<br>
+Reciprocally, the cyberspace may appear as some kind of equally disruptive space, a heterotopia in the Foucaultian sense, where an utopia has effectively taken place. It offers a computer generated reality in which human fantasies ought to bloom while still echoing the real world and modifying its dynamics. In that sense, cyberspace is not an isolated, exceptional entity but is indeed completely inscribed in reality. 
+The term cyberspace was coined by William Gibson in 1993 in his science-fi short novel Neuromancer to describe the utopian digital arena in which his story takes place. The term begun to fade.
+
+
+</p>
+
+
+      </div>
+
+
+</body>
+
+<script>
+
+var i = 0;
+var dragging = false;
+   $('#dragbar').mousedown(function(e){
+       e.preventDefault();
+       
+       dragging = true;
+       var thesis = $('.thesis');
+       var dragbar = $("#dragbar");
+       var ghostbar = $('<div>',
+                        {id:'ghostbar',
+                         css: {
+                                height: dragbar.outerHeight(),
+                                width: dragbar.outerWidth(),
+                                top: thesis.offset().top,
+                                bottom: thesis.offset().bottom
+                               }
+                        }).appendTo('body');
+       
+        $(document).mousemove(function(e){
+          ghostbar.css("top",e.pageY+2);
+       });
+    });
+
+   $(document).mouseup(function(e){
+       if (dragging) 
+       {
+           $('.information').css("height",e.pageY+2);
+           // $('.corrupted').css("top",e.pageY+2);
+           $('#ghostbar').remove();
+           $(document).unbind('mousemove');
+           dragging = false;
+       }
+    });
+
+
+</script>
+
+</html>
