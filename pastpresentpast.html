@@ -77,15 +77,15 @@ var dragging = false;
        e.preventDefault();
        
        dragging = true;
-       var pppwebsite = $('.pppwebsite');
+       var pppvisuals = $('.pppvisuals');
        var dragbar = $("#dragbar");
        var ghostbar = $('<div>',
                         {id:'ghostbar',
                          css: {
                                 height: dragbar.outerHeight(),
                                 width: dragbar.outerWidth(),
-                                top: pppwebsite.offset().top,
-                                bottom: pppwebsite.offset().bottom
+                                top: pppvisuals.offset().top,
+                                bottom: pppvisuals.offset().bottom
                                }
                         }).appendTo('body');
        
@@ -98,7 +98,7 @@ var dragging = false;
        if (dragging) 
        {
            $('.information').css("height",e.pageY+2);
-           // $('.pppwebsite').css("top",e.pageY+2);
+           // $('.pppvisuals').css("top",e.pageY+2);
            $('#ghostbar').remove();
            $(document).unbind('mousemove');
            dragging = false;
