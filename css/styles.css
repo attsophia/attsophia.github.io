@@ -155,24 +155,24 @@ body {
 }
 */
 
-a:link {
+a.general:link {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-a:visited {
+a.general:visited {
 	color: black;
 }
 
-a:hover {
+a.general:hover {
 	color: black;
 	border-bottom: 1px solid;
 }
 
-.active {
+/*.active {
 	color: blue;
-}
+}*/
 
 .submenu {
 	position: absolute;
@@ -508,6 +508,103 @@ background-color: #e6e6e6;
     }
 
     }
+
+
+/*footer {
+  margin-top: 50px;
+  border-top: 1px solid silver;
+  font-size: 0.8em;
+}
+
+footer ol {
+  padding-left: 20px;
+}*/
+
+/**
+ * Initialiazing a `footnotes` counter on the wrapper
+ */
+article {
+  counter-reset: footnotes;
+}
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+[aria-describedby="footnote-label"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: inherit; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+[aria-describedby="footnote-label"]::after {
+  content: '[' counter(footnotes) ']'; 
+  vertical-align: super; 
+  font-size: 0.5em; 
+  margin-left: 2px; 
+  color: #6d06ff; 
+  text-decoration: none; 
+  cursor: pointer;
+}
+
+[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+/*[aria-label="Back to content"] {
+  font-size: 0.8em;
+}*/
+
+/**
+ * Highlight target note
+ */
+
+
+.footer {
+	position: absolute;
+	width: 20%;
+    float: right;
+	right: 0px;
+	top: 180px;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color: #6d06ff;
+}
+
+
+.footer :target {
+  color: orange;
+}
+
+a.hyperfoot:link {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a.hyperfoot:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a.hyperfootl:hover {
+	color: black;
+	text-decoration: none;
+}
+
 
 
 /*thesis project ends here*/
