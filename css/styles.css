@@ -657,12 +657,17 @@ a.hyperfootl:hover {
 	z-index: 10000;
 }*/
 
+.pppvisuals {
+	background-color: black;
+}
+
 
 .pppvisuals img {
 	width: 100%;
 	height: auto;
 	background-position: center;
 	display: inline-block;
+	background-color: black;
 }
 
 
