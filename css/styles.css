@@ -987,14 +987,15 @@ a.hyperfootl:hover {
 
 
 .hall {
-	width: 100%;
+	background-color: #f1f1f1;
+	position: relative;
 	height: auto;
 	padding: 0;
 	margin: 0;
-	background-color: #f1f1f1;
-	z-index: 0;
-	margin: 0;
+	width: 100%;
+	height: auto;
 }
+
 
 .hallinformation {
 	width: 80%;
@@ -1009,13 +1010,38 @@ a.hyperfootl:hover {
     }
 
 
+
+
 .workof img {
+	width: 100%;
 	background-position: center;
+	height: auto;
 	display: block;
 	margin-left: auto;
     margin-right: auto;
+    background-color: #f1f1f1;
+	display: inline-block;
 }
 
+
+@media screen and (max-width: 1000px) {
+
+    .workof img {
+        width: 100%;
+        background-position: center;
+        	padding-right: 5px;
+    }
+
+}
+
+.workof {
+	background-color: #f1f1f1;
+	z-index: 10000;
+	position: absolute;
+	padding-top: 5px;
+	padding-left: 5px;
+
+}
 
 
 /*.workof {
@@ -1757,6 +1783,86 @@ a.hyperfootl:hover {
 
 
 /*nbjork project ends here*/
+
+
+
+/*art manifesto generator project starts here*/
+
+
+.generator {
+	background-color: #f1f1f1;
+	position: relative;
+	height: auto;
+	width: 100%;
+	height: auto;
+}
+
+
+.generatorinformation {
+	padding: 10px;
+	width: 60%;
+
+}
+
+	@media screen and (max-width: 450px) {
+    .generatorinformation {
+	font-size: 17px;
+    }
+
+    }
+
+
+
+.generatorvisuals {
+	background-color: #f1f1f1;
+	z-index: 10000;
+	position: relative;
+	display: inline-block;
+}
+
+
+
+#generator1 {
+	width: 49.7%;
+	display: inline-block;
+	margin-left: 6px;
+	margin-top: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .generator1 {
+        width: 50%;
+        padding-right: 5px;
+    }
+
+}
+
+#generator2 {
+	width: 49.46%;
+	display: inline-block;
+	margin-top: 0;
+
+}
+
+#generator3 {
+	width: 100%;
+	display: inline-block;
+
+}
+
+/*#canvasg {
+	width: 400px;
+	height: 400px;
+}*/
+
+
+/*art manifesto generator project ends here*/
+
+
+
+
 
 .fading{
 	background-color: #000000;
