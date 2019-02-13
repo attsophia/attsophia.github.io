@@ -21,7 +21,7 @@
 
 			* {
 
-  				cursor: url(cursor.png), auto;
+  				cursor: url(cursor.png) 29 9, auto;
 			}
 
 			::-moz-selection { 
@@ -82,11 +82,11 @@
 
 			.blinkcontainer {
 				background-color: transparent;
-				color: transparent;
-				width: 60px;
-				height: 60px;
-				z-index: 1;
+				width: 18px;
+				height: 18px;
+				z-index: 0;
 				position: absolute;
+
 
 				top:0;
 				bottom: 0;
@@ -107,7 +107,7 @@
 
 .blinkcontainer .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 100px;
     font-size: 14px;
     color: black;
     background-color: gray;
@@ -116,14 +116,14 @@
     padding: 4px 4px;
     position: absolute;
     z-index: 1;
-    bottom: 100%;
+    bottom: 190%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -50px;
     opacity: 0;
     transition: opacity 1s;
 }
 
-.tooltip:hover .tooltiptext {
+.blinkcontainer:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
@@ -283,9 +283,9 @@ What are we longing for when we are caught by the sentiment of nostalgia? Is it 
         ZOOM IN
  		</div> -->
 <div class="blinkcontainer">
- 		<div class="tooltip">Hover over me
-  <span class="tooltiptext">scroll with your mouse outside this area</span>
-</div>
+ <!-- 		<div class="tooltip">Hover over me -->
+  <span class="tooltiptext">try zooming in or scrolling</span>
+<!-- </div> -->
 		</div>
 
 
