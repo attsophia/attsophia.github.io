@@ -1795,7 +1795,11 @@ a.hyperfootl:hover {
 	height: auto;
 	width: 100%;
 	height: auto;
+	z-index: 0;
+	padding: 0;
+	margin: 0;
 }
+
 
 
 .generatorinformation {
@@ -1812,32 +1816,50 @@ a.hyperfootl:hover {
     }
 
 
+.generatorvisuals img {
+	width: 49.7%;
+	height: auto;
+	display: inline-block;
+}
+
+/*@media screen and (max-width: 1500px) {
+
+    .generatorvisuals img {
+        background-position: center;
+        width: 100%;
+        display: inline-block;
+        margin-left: 0;
+    }
+
+}*/
+
 
 .generatorvisuals {
 	background-color: #f1f1f1;
 	z-index: 10000;
 	position: relative;
-	display: inline-block;
+	position: absolute;
 }
 
 
 
 #generator1 {
 	width: 49.7%;
-	display: inline-block;
 	margin-left: 6px;
 	margin-top: 0;
 }
 
+@media screen and (max-width: 1187px) {
 
-@media screen and (max-width: 1000px) {
-
-    .generator1 {
-        width: 50%;
-        padding-right: 5px;
+    #generator1 {
+        background-position: center;
+        width: 100%;
+        display: inline-block;
+        margin-left: 0;
     }
 
 }
+
 
 #generator2 {
 	width: 49.46%;
@@ -1846,16 +1868,22 @@ a.hyperfootl:hover {
 
 }
 
-#generator3 {
-	width: 100%;
-	display: inline-block;
+
+@media screen and (max-width: 1187px) {
+
+    #generator2 {
+        background-position: center;
+        width: 100%;
+        display: inline-block;
+    }
 
 }
 
-/*#canvasg {
-	width: 400px;
-	height: 400px;
-}*/
+
+#generator3 {
+	width: 100%;
+	display: inline-block;
+}
 
 
 /*art manifesto generator project ends here*/
