@@ -8,7 +8,7 @@
 		<style>
 
 			body {
-				font-family: 'Arial Narrow';
+				font-family: 'Arial Narrow', sans serif;
 				background-color: black;
 				color: black;
 				margin: 0 0 0 0;
@@ -35,6 +35,21 @@
 			}
 
 
+
+
+@font-face {
+  font-family: "Arial Narrow";
+  src: local(font name), url("ArialNarrow.ttf");
+  src: url("fonts/ArialNarrow.eot");
+  src:
+       url("fonts/ArialNarrow.woff") format('woff'),
+       url("fonts/ArialNarrow.ttf") format('truetype'),
+       url("fonts/ArialNarrow.svg") format('svg'),
+       url("fonts/ArialNarrow.eot") format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 			
 			#glFullscreen {
 				width: 100%;
@@ -57,8 +72,8 @@
 
 
 			.blink {
-				width: 0.4vw;
-				height: 0.4vw;
+				width: 10px;
+				height: 10px;
 				background-color: red;
  				border-radius: 50%;
  				position: absolute;
@@ -72,13 +87,16 @@
 
 				animation:fade 1000ms infinite;
     			-webkit-animation:fade 1000ms infinite;
-
-/*    			        moz-transition: all 1s ease-in-out;
-        o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
-        webkit-transition: all 1s ease-in-out;*/
 	
 			}
+
+					@media screen and (max-width: 450px) {
+    			.blink {
+				width: 15px;
+				height: 15px;
+    			}
+
+    				}
 
 			.blinkcontainer {
 				background-color: transparent;
@@ -196,6 +214,12 @@
   			padding: 5px;
 			}
 
+					@media screen and (max-width: 450px) {
+    			#abouttext {
+				font-size: 15px;
+    			}
+    				}			
+
 
 			#captions {
 			display: block;
@@ -208,6 +232,14 @@
   			padding: 5px;
 			}
 
+					@media screen and (max-width: 450px) {
+    			#captions {
+				font-size: 13px;
+    			}
+    				}
+
+
+
 			#links {
 			display: block;
 			position: relative;
@@ -219,6 +251,12 @@
   			border: 1px solid black;
   			padding: 5px;
 			}
+
+					@media screen and (max-width: 450px) {
+    			#links {
+				font-size: 13px;
+    			}
+    				}			
 
 
   			.aboutsection {
@@ -236,6 +274,11 @@
   			display: block;
 			}
 
+					@media screen and (max-width: 450px) {
+    			.aboutsection img {
+				width: 100%;
+    			}
+    				}
 
 
 
@@ -284,7 +327,7 @@ What are we longing for when we are caught by the sentiment of nostalgia? Is it 
  		</div> -->
 <div class="blinkcontainer">
  <!-- 		<div class="tooltip">Hover over me -->
-  <span class="tooltiptext">try zooming in or scrolling</span>
+  <span class="tooltiptext">use your scrolling device to pull out</span>
 <!-- </div> -->
 		</div>
 
@@ -410,7 +453,7 @@ A Communications Primer, Ray and Charles Eames
 						posCamera: new THREE.Vector3( 0.0, 175.0, 12000.0 ),
 						posCameraTarget: new THREE.Vector3( 0, 0, 0 ),
 						near: 0.1,
-						far: 10000,
+						far: 9000,
 						fov: 45
 					};
 					this.camera = null;
