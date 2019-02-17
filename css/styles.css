@@ -1817,7 +1817,6 @@ a.hyperfootl:hover {
 
 
 .generatorvisuals img {
-	width: 49.7%;
 	height: auto;
 	display: inline-block;
 }
@@ -1837,19 +1836,17 @@ a.hyperfootl:hover {
 .generatorvisuals {
 	background-color: #f1f1f1;
 	z-index: 10000;
-	position: relative;
 	position: absolute;
 }
 
 
 
 #generator1 {
-	width: 49.7%;
-	margin-left: 6px;
-	margin-top: 0;
+	width: 49.9%;
+	display: inline-block;
 }
 
-@media screen and (max-width: 1187px) {
+@media screen and (max-width: 1321px) {
 
     #generator1 {
         background-position: center;
@@ -1862,19 +1859,19 @@ a.hyperfootl:hover {
 
 
 #generator2 {
-	width: 49.46%;
+	width: 49.8%;
 	display: inline-block;
-	margin-top: 0;
 
 }
 
 
-@media screen and (max-width: 1187px) {
+@media screen and (max-width: 1321px) {
 
     #generator2 {
         background-position: center;
         width: 100%;
         display: inline-block;
+        margin-left: 0;
     }
 
 }
