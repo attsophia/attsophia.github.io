@@ -88,6 +88,17 @@ body {
         animation-iteration-count: infinite;*/
 }
 
+
+/*.ball2 {
+    -webkit-animation: glow .5s infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    to {
+        box-shadow: 0 0 10px red;
+    }
+}*/
+
 /*    @-webkit-keyframes glow {
         from { text-shadow: 0 0 0px red; }
         to { text-shadow: 0 0 20px red; }
