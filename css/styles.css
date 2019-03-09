@@ -10,6 +10,10 @@ body {
  
 }
 
+title {
+  display: none;
+}
+
 /*@font-face {
   font-family: "SplendidScript";
   src: local(font name), url("SplendidScript.ttf");
