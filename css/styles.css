@@ -41,6 +41,7 @@ title {
 
     .floatingmenu {
 	font-size: 17px;
+	position: fixed;
     }
 
     }
@@ -427,11 +428,28 @@ background-color: #e6e6e6;
 
 	@media screen and (max-width: 450px) {
     .navigation {
-	font-size: 17px;
-	margin-right: 2%;
+	display: none;
     }
 
     }
+
+
+.navigation-mobile {
+	position: absolute;
+	font-size: 17px;
+	padding: 10px;
+	margin-left: 73%;
+	top:0px;
+	display: none;
+}
+
+	@media screen and (max-width: 450px) {
+    .navigation-mobile {
+	display: inline;
+    }
+
+    }
+
 
 	#text {
 	overflow: hidden;
@@ -452,6 +470,14 @@ background-color: #e6e6e6;
 
 
 }
+
+	@media screen and (max-width: 450px) {
+    #technicalinfo {
+	width: 60%;
+    }
+
+    }
+
 
 
 /*	#buynow {
@@ -485,6 +511,7 @@ background-color: #e6e6e6;
 	@media screen and (max-width: 450px) {
     .thesisinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -659,6 +686,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .pastpresentpastinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -709,6 +737,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .corruptedinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -766,6 +795,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .womeninartinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -851,6 +881,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .justanotherway-information {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -907,19 +938,13 @@ a.hyperfootl:hover {
 }
 
 	@media screen and (max-width: 450px) {
-    .fearEUinformation {
-	font-size: 20px;
+    .fearEU-information {
+	font-size: 17px;
+	width: 94%;
     }
 
     }
 
-
-	@media screen and (max-width: 450px) {
-    .fearEU-navigation {
-	font-size: 20px;
-    }
-
-    }
 
 
 /*.fearwebsite {
@@ -955,13 +980,14 @@ a.hyperfootl:hover {
 
 .beenthinking-information {
 	padding: 10px;
-	width: 60%;
+	width: 80%;
 
 }
 
 	@media screen and (max-width: 450px) {
     .beenthinking-information {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1020,6 +1046,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .hallinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1118,6 +1145,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .servedinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1585,6 +1613,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .oknotokinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1661,6 +1690,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .notavailable-information {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1760,6 +1790,7 @@ a.hyperfootl:hover {
 	@media screen and (max-width: 450px) {
     .bjork-information {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
@@ -1819,13 +1850,13 @@ a.hyperfootl:hover {
 
 .generatorinformation {
 	padding: 10px;
-	width: 60%;
-
+	width: 80%;
 }
 
 	@media screen and (max-width: 450px) {
     .generatorinformation {
 	font-size: 17px;
+	width: 94%;
     }
 
     }
