@@ -1638,6 +1638,11 @@ a.hyperfootl:hover {
 	position: relative;
 }
 
+#available1 {
+	width: 100%;
+	margin: 0;
+}
+
 .allslideshows {
 	padding: 0;
 	margin: 0;
