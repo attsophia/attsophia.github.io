@@ -210,6 +210,16 @@ a.general:hover {
     }
 
 
+
+
+.guest {
+    color: #000;
+    background-image: -webkit-linear-gradient(360deg,#7147ff,#ff47ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 6s infinite linear;
+}
+
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -217,14 +227,6 @@ a.general:hover {
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
-}
-
-.guest {
-    color: #000;
-    background-image: -webkit-linear-gradient(92deg,#4156F4,#4156F4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 8s infinite linear;
 }
 
 a.guest:link {
