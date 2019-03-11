@@ -121,9 +121,12 @@ a.general:hover {
 	border-bottom: 1px solid;
 }
 
+
 /*.active {
 	color: blue;
 }*/
+
+
 
 .submenu {
 	position: absolute;
@@ -207,14 +210,34 @@ a.general:hover {
     }
 
 
-
-@-webkit-keyframes hue {
+/*@-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
   }
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
+}*/
+
+.guest {
+    color: #000;
+    background-image: -webkit-linear-gradient(92deg,#4156F4,#4156F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 8s infinite linear;
+}
+
+a.guest:link {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a.guest:visited {
+	color: black;
+}
+
+a.guest:hover {
+	border-bottom: 1px solid;
 }
 
 
@@ -277,7 +300,6 @@ a.general:hover {
 */	/* Ronja */
 	top: 0 !important;
 	padding: 0 0 0 0 !important;
-
 }
 
 
