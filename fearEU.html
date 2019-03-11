@@ -86,15 +86,15 @@ var dragging = false;
        e.preventDefault();
        
        dragging = true;
-       var fearwebsite = $('.fearwebsite');
+       var fearEU = $('.fearEU');
        var dragbar = $("#dragbar");
        var ghostbar = $('<div>',
                         {id:'ghostbar',
                          css: {
                                 height: dragbar.outerHeight(),
                                 width: dragbar.outerWidth(),
-                                top: fearwebsite.offset().top,
-                                bottom: fearwebsite.offset().bottom
+                                top: fearEU.offset().top,
+                                bottom: fearEU.offset().bottom
                                }
                         }).appendTo('body');
        
