@@ -210,14 +210,14 @@ a.general:hover {
     }
 
 
-/*@-webkit-keyframes hue {
+@-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
   }
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
-}*/
+}
 
 .guest {
     color: #000;
