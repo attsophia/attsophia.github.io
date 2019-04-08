@@ -140,6 +140,8 @@ a.general:hover {
 	font-family: "Times New Roman";
 }
 
+/*check orientation portrait and landscape?*/
+
 	@media screen and (max-width: 450px) {
     .submenu {
 	width: 75%;
