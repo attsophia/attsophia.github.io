@@ -112,7 +112,49 @@
 			});
 
 
+
+			var favicon_images = [
+                    'images/output/tmp-0.gif',
+                    'images/output/tmp-1.gif',
+                    'images/output/tmp-2.gif',
+                    'images/output/tmp-3.gif',
+                    'images/output/tmp-4.gif',
+                    'images/output/tmp-5.gif',
+                    'images/output/tmp-6.gif',
+                    'images/output/tmp-7.gif',
+                    'images/output/tmp-8.gif',
+                    'images/output/tmp-9.gif',
+                    'images/output/tmp-10.gif',
+                    'images/output/tmp-11.gif',
+                    'images/output/tmp-12.gif',
+                    'images/output/tmp-13.gif',
+                    'images/output/tmp-14.gif',
+                    'images/output/tmp-15.gif',
+                    'images/output/tmp-16.gif',
+                    'images/output/tmp-17.gif',
+                    'images/output/tmp-18.gif'
+                ],
+    image_counter = 0; // To keep track of the current image
+
+setInterval(function() {
+    $("link[rel='icon']").remove();
+    $("link[rel='shortcut icon']").remove();
+    $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+	// If last image then goto first image
+	// Else go to next image    
+	if(image_counter == favicon_images.length -1)
+        image_counter = 0;
+    else
+        image_counter++;
+}, 10);
+
+
     });
+
+
+
+
 
 		</script>
 
