@@ -12,6 +12,9 @@
 
 
 <body class="thesis">
+
+
+
 	
 			
 
@@ -51,6 +54,15 @@
 
 
       <div class="thesiscontent">
+
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div> 
+</div>
+
+
 
       	<table width=100% style='font-family: monospace;'>
     <tr style='border-bottom: 1px solid #000;'>
@@ -186,6 +198,16 @@ var dragging = false;
            dragging = false;
        }
     });
+
+   // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 
 </script>
