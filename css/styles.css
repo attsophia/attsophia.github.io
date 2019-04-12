@@ -59,13 +59,6 @@ title {
 	right: 0;
 }
 
-/*.ball {
-	width: 64px;
-	height: 64px;
-	background: red;
-	display: inline-block;
-	border-radius: 50%;
-}*/
 
 .ball {
 	width: 550px;
@@ -419,7 +412,6 @@ background-color: #e6e6e6;
 	margin-top: 3%;
 	width: 70%;
 	height: 100%;
-/*	padding: 10px;*/
 	}
 
 	@media screen and (max-width: 450px) {
@@ -441,14 +433,6 @@ background-color: #e6e6e6;
 
     }
 
-
-
-/*	#buynow {
-		margin-top: 15px;
-		position: fixed;
-		width: 70px;
-
-	}*/
 
 
 /*info for projects ends here*/
@@ -601,7 +585,7 @@ article {
  * Highlight target note
  */
 
-
+    @media screen and (min-width: 450px) {
 .footer {
 	position: absolute;
 	width: 20%;
@@ -616,16 +600,18 @@ article {
   	border-color: transparent;
   	transition: 1s;
 }
+}
 
+
+    @media screen and (min-width: 450px) {
 .footer:hover {
  	border-style: solid;
   	border-width: 1px;
   	border-radius: 25px;
   	position: absolute;
   	border-color: #6d06ff;
-
-
  }
+}
 
 
 
@@ -635,6 +621,8 @@ article {
 	bottom: 0;
 	position: relative;
 	background-color: white;
+	color: #6d06ff;
+	right: 10px;
     }
 
     }

@@ -97,11 +97,12 @@ a:visited {
 #title {
 	font-family: 'Helvetica';
 	font-style: normal;
-	font-size: 65px;
+	font-size: 60px;
 	text-rendering: optimizeLegibility;
 	text-align: center;
   margin: auto;
   width: 40%;
+
 /*  position: absolute;*/
 
 }
@@ -134,7 +135,7 @@ a:visited {
   font-family: 'Helvetica';
   width: 200px;
   font-style: normal;
-  font-size: 20px;
+  font-size: 15px;
   color: #ff3434;
   text-decoration: underline;
   position: absolute;
@@ -148,7 +149,7 @@ a:visited {
   background-color: #bbbaba;
   font-family: 'Helvetica';
   color: black;
-  font-size: 16px;
+  font-size: 15px;
 
   position: fixed;
   overflow: auto;
@@ -250,7 +251,7 @@ input, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 
   width: 45%;
   box-sizing: border-box;
@@ -295,7 +296,7 @@ textarea {
   padding: 3px;
   background-color: white;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   height: auto;
   margin-bottom: 30px;
   padding: 8px;
