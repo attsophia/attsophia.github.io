@@ -523,6 +523,13 @@ background-color: #e6e6e6;
     }
 
 
+/*.plan {
+	font-size: 12px;
+	margin-left: 20px;
+	margin-top: 15px;
+	font-family: Helvetica;
+}*/
+
 /*footer {
   margin-top: 50px;
   border-top: 1px solid silver;
@@ -599,7 +606,14 @@ article {
   	border-radius: 25px;
   	border-color: transparent;
   	transition: 1s;
+  	height: 400px;
+  	overflow: auto;
+  	padding-right: 40px;
 }
+}
+
+.footer p {
+	height: auto;
 }
 
 
