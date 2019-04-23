@@ -5,9 +5,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		<script src="jquery.min.js"></script>
 		<script src="three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.3.3/dist/interact.min.js"></script>
 		    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="HandheldFriendly" content="true">
+
 
 
 
@@ -54,6 +56,41 @@
 
 
       <div class="thesiscontent">
+
+
+
+<div class="plan">
+<table style="width:150px">
+  <tr>
+    <th>...</th>
+  </tr>
+  <tr>
+    <td>1. The setting I</td>
+  </tr>
+  <tr>
+    <td>2. The subject</td>
+  </tr>
+  <tr>
+    <td>3. The promise</td>
+  </tr>
+  <tr>
+    <td>4. The setting II</td>
+  </tr>
+  <tr>
+    <td>5. The disenchantment</td>
+  </tr>
+  <tr>
+    <td>6. The longing</td>
+  </tr>
+  <tr>
+    <td>7. The staging</td>
+  </tr>
+  <tr>
+    <td>8. The setting III</td>
+  </tr>
+</table>
+</div>
+
 
 
 
@@ -122,18 +159,7 @@
         
 
 
-<!-- <div class="plan">
-<ol type="1">
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting I</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The subject</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The promise</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting II</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The disenchantment</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The longing</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The staging</li>
-  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting III</li>
-</ol> 
-</div> -->
+
 
 
 
@@ -200,12 +226,7 @@ Patrice Flichy<a class="hyperfoot" href="#footnote6" aria-describedby="footnote-
   </div>
 
 
-
-
-
-
       </div>
-
 
 
 
@@ -213,6 +234,13 @@ Patrice Flichy<a class="hyperfoot" href="#footnote6" aria-describedby="footnote-
 </body>
 
 <script>
+
+// $(document).ready(function(){
+//   $("#flip").click(function(){
+//     $("#panel").slideToggle("slow");
+//   });
+// });
+
 
 var i = 0;
 var dragging = false;
@@ -310,6 +338,53 @@ $(document).ready(function() {
     });
   }
 });
+
+
+
+    // target elements with the "draggable" class
+    interact('.plan')
+      .draggable({
+        // enable inertial throwing
+        // inertia: true,
+        // keep the element within the area of it's parent
+        // restrict: {
+        //   restriction: "parent",
+        //   endOnly: true,
+        //   elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+        // },
+        // enable autoScroll
+        autoScroll: true,
+
+        // call this function on every dragmove event
+        onmove: dragMoveListener,
+        // call this function on every dragend event
+        onend: function(event) {
+          var textEl = event.target.querySelector('p');
+
+          textEl && (textEl.textContent =
+            'moved a distance of ' +
+            (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+              Math.pow(event.pageY - event.y0, 2) | 0))
+            .toFixed(2) + 'px');
+        }
+      });
+
+    function dragMoveListener(event) {
+      var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+      // translate the element
+      target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
+
+      // update the posiion attributes
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    }
+
 
 
 </script>

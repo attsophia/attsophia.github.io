@@ -441,30 +441,6 @@ background-color: #e6e6e6;
 
 
 
-/* Style the header: fixed position (always stay at the top) 
-.header {
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
- The progress container (grey background) 
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background: #ccc;
-}
-
- The progress bar (scroll indicator) 
-.progress-bar {
-  height: 8px;
-  background: #6d06ff;
-  width: 0%;
-}*/
-
-
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -582,12 +558,37 @@ progress::-moz-progress-bar {
     }
 
 
-.plan {
-	font-size: 12px;
-	margin-left: 30px;
-	margin-top: 70px;
-	font-family: Helvetica;
+
+table, th, td {
+  border: 1px solid black;
+  background-color: white;
+/*  background-color: #e5eecc;*/
 }
+
+
+
+
+.plan {
+	font-size: 10px;
+	font-family: Helvetica;
+	position: absolute;
+	top: 35%;
+	left: 60%;
+
+}
+
+
+
+
+
+
+
+
+/*#panel {
+  display: none;
+}*/
+
+
 
 /*footer {
   margin-top: 50px;
