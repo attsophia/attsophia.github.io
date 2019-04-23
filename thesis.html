@@ -56,15 +56,18 @@
       <div class="thesiscontent">
 
 
-<div class="header">
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div> 
-</div>
+
+<progress value="0" max="1">
+            <!-- Older browsers look to the old div style of progress bars -->
+            <!-- Newer browsers ignore this stuff but it allows older browsers to 
+                    still have a progress bar. -->
+            <div class="progress-container">
+                <span class="progress-bar"></span>    
+            </div>
+        </progress>
 
 
-
-      	<table width=100% style='font-family: monospace;'>
+<!--       	<table width=100% style='font-family: monospace;'>
     <tr style='border-bottom: 1px solid #000;'>
         <td>
             |
@@ -115,25 +118,26 @@
             10
         </td>
     </tr>
-</table>
+</table> -->
         
 
 
+<!-- <div class="plan">
+<ol type="1">
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting I</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The subject</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The promise</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting II</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The disenchantment</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The longing</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The staging</li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The setting III</li>
+</ol> 
+</div> -->
 
 
-
-
-<!-- <div class="plan">The setting I
-<br>The subject
-<br>The promise
-<br>The setting II
-<br>The disenchantment  
-<br>The longing
-<br>The staging 
-<br>The setting III</div> -->
 
 <p>
-<br>
 <br>This is how it all starts.
 <br>
 <br>Let’s begin by setting the context.
@@ -244,15 +248,68 @@ var dragging = false;
        }
     });
 
-   // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
+
+
+$(document).ready(function() {
+
+  var getMax = function() {
+    return $(document).height() - $(window).height();
+  }
+
+  var getValue = function() {
+    return $(window).scrollTop();
+  }
+
+  if ('max' in document.createElement('progress')) {
+    var progressBar = $('progress');
+    
+    progressBar.attr({
+      max: getMax()
+    });
+
+    $(document).on('scroll', function() {
+      progressBar.attr({
+        value: getValue()
+      });
+    });
+
+    $(window).resize(function() {
+      
+      progressBar.attr({
+        max: getMax(),
+        value: getValue()
+      });
+    });
+
+  } else {
+
+    var progressBar = $('.progress-bar'),
+      max = getMax(),
+      value, width;
+
+    var getWidth = function() {
+      
+      value = getValue();
+      width = (value / max) * 100;
+      width = width + '%';
+      return width;
+    }
+
+    var setWidth = function() {
+      progressBar.css({
+        width: getWidth()
+      });
+    }
+
+    $(document).on('scroll', setWidth);
+    $(window).on('resize', function() {
+      
+      max = getMax();
+      setWidth();
+    });
+  }
+});
 
 
 </script>
