@@ -568,7 +568,7 @@ table, th, td {
 
 
 
-.plan, .loving-grace {
+.plan, .loving-grace, .no-maps {
 	font-size: 10px;
 	font-family: Helvetica;
 	position: absolute;
@@ -586,6 +586,11 @@ table, th, td {
 .loving-grace {
 	top: 3100px;
 	left: 75%;
+}
+
+.no-maps {
+	top: 2100px;
+	left: 80%;
 }
 
 
