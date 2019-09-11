@@ -437,6 +437,97 @@ background-color: #e6e6e6;
 
 /*info for projects ends here*/
 
+
+/*please fill in project starts here*/
+
+
+.pleasefillintheemptyspace {
+	background-color: #f1f1f1;
+	position: relative;
+	height: auto;
+	width: 100%;
+	height: auto;
+}
+
+
+.pleasefillintheemptyspace-information {
+	padding: 10px;
+	width: 75%;
+
+}
+
+	@media screen and (max-width: 450px) {
+    .bjork-information {
+	font-size: 17px;
+	width: 94%;
+    }
+
+    }
+
+
+
+.pleasefillintheemptyspacevisuals {
+	z-index: 10000;
+	position: absolute;
+}
+
+
+
+.pleasefillintheemptyspace img {
+	width: 49.55%;
+	height: auto;	
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .pleasefillintheemptyspacevisuals img {
+        width: 100%;
+        background-position: center;
+        padding-right: 5px;
+    }
+
+}
+
+#pleasefillintheemptyspace1 {
+	margin-left: 5px;
+}
+
+
+
+
+
+/*.corruptedposters img {
+	width: 49.7%;
+	height: auto;
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .corruptedposters img {
+        width: 100%;
+        background-position: center;
+        margin-right: 5px;
+    }
+
+}
+
+.corruptedposters {
+	background-color: #f1f1f1;
+	z-index: 10000;
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 5px;
+
+}*/
+
+
+/*please fill in project ends here*/
+
+
 /*thesis project starts here*/
 
 
@@ -497,6 +588,7 @@ progress::-moz-progress-bar {
 	height: inherit;
 	z-index: 10;
 }
+
 
 
 .thesis {
@@ -691,7 +783,7 @@ article {
 }
 
 
-    @media screen and (min-width: 450px) {
+/*    @media screen and (min-width: 450px) {
 .footer:hover {
  	border-style: solid;
   	border-width: 1px;
@@ -699,7 +791,7 @@ article {
   	position: absolute;
   	border-color: #6d06ff;
  }
-}
+}*/
 
 
 
