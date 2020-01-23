@@ -34,8 +34,8 @@ title {
 
 .floatingmenu {
 	position: absolute;
-	top: 25px; 
-	left: 30px;
+	top: 20px; 
+	left: 25px;
 	font-family: "Times New Roman";
 	font-size: 16px;
 	cursor: pointer;
@@ -44,8 +44,11 @@ title {
 	@media screen and (max-width: 450px) {
 
     .floatingmenu {
-	font-size: 17px;
+	font-size: 16px;
 	position: fixed;
+	top: 10px;
+	left: 14px;
+
     }
 
     }
@@ -158,7 +161,7 @@ a.maq:hover {
 	background-color: : #f1f1f1;
 	float: right;
 	right: 20px;
-	top: 10px;
+	top: 5px;
 	padding-left: 1vw;
 	padding-right: 1vw;
 	font-family: "Times New Roman";
@@ -169,6 +172,8 @@ a.maq:hover {
 	@media screen and (max-width: 450px) {
     .submenu {
 	width: 75%;
+	top: -6px;
+	right: 5px;
     }
 
     }
@@ -176,6 +181,8 @@ a.maq:hover {
     @media screen and (max-width: 800px) and (min-width: 449px) {
     .submenu {
 	width: 55%;
+	top: -6px;
+	right: 5px;
     }
 
     }
@@ -191,7 +198,7 @@ a.maq:hover {
 
 	@media screen and (max-width: 450px) {
     .workmenu {
-	font-size: 17px;
+	font-size: 16px;
     }
 
     }
@@ -204,7 +211,7 @@ a.maq:hover {
 
 	@media screen and (max-width: 450px) {
     .aboutmenu {
-	font-size: 17px;
+	font-size: 16px;
     }
 
     }
@@ -217,7 +224,7 @@ a.maq:hover {
 
 	@media screen and (max-width: 450px) {
     .contactmenu {
-	font-size: 17px;
+	font-size: 16px;
     }
 
     }
@@ -230,7 +237,7 @@ a.maq:hover {
 
 	@media screen and (max-width: 450px) {
     .moremenu {
-	font-size: 17px;
+	font-size: 16px;
     }
 
     }
@@ -378,6 +385,13 @@ a.guest:hover {
    z-index: 1;
 }
 
+/*	@media screen and (max-width: 450px) {
+    .information {
+	font-size: 16px;
+    }
+
+    }*/
+
 .information:hover {
 background-color: #e6e6e6;
 }
@@ -426,7 +440,7 @@ background-color: #e6e6e6;
 
 .navigation-mobile {
 	position: absolute;
-	font-size: 17px;
+	font-size: 16px;
 	padding: 10px;
 	margin-left: 73%;
 	top:0px;
@@ -451,7 +465,7 @@ background-color: #e6e6e6;
 	@media screen and (max-width: 450px) {
 
     #text {
-	font-size: 17px;
+	font-size: 16px;
 	width: 100%;
 	margin-top: 19%;
     }
@@ -493,7 +507,7 @@ background-color: #e6e6e6;
 
 	@media screen and (max-width: 450px) {
     .maqam-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -555,7 +569,7 @@ background-color: #e6e6e6;
 
 	@media screen and (max-width: 450px) {
     .bjork-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -675,7 +689,7 @@ progress::-moz-progress-bar {
 
 	@media screen and (max-width: 450px) {
     .thesisinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -923,7 +937,7 @@ a.hyperfootl:hover {
 
 	@media screen and (max-width: 450px) {
     .pastpresentpastinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -974,7 +988,7 @@ a.hyperfootl:hover {
 
 	@media screen and (max-width: 450px) {
     .corruptedinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -1122,7 +1136,7 @@ a.hyperfootl:hover {
 
 	@media screen and (max-width: 450px) {
     .justanotherway-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -1406,7 +1420,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .fearEU-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -1453,7 +1467,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .beenthinking-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -1512,7 +1526,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .hallinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -1615,7 +1629,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .servedinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -2160,7 +2174,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .notavailable-information {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
@@ -2332,7 +2346,7 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 	@media screen and (max-width: 450px) {
     .generatorinformation {
-	font-size: 17px;
+	font-size: 16px;
 	width: 94%;
     }
 
