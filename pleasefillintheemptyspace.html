@@ -21,6 +21,8 @@
 
 					<div id="home"><a class="general" href="index.html">home</a></div>
 
+          <div id="previous"><a class="general" href="maqam.html">previous project</a></div>
+
 					<div id="next"><a class="general" href="thesis.html">next project</a></div>
 
 
@@ -30,6 +32,8 @@
 
           <div id="home"><a class="general" href="index.html">home</a></div>
 
+          <div id="previous"><a class="general" href="maqam.html">previous project</a></div>
+
           <div id="next"><a class="general" href="thesis.html">next</a></div>
 
 
@@ -38,11 +42,9 @@
 
 			<div class="pleasefillintheemptyspace-information">
 
-					Please fill in the empty space + Maqam 
-					<div id="technicalinfo"><i>Performance, video, film festival<br>2019</i></br></div>
-					<div id="text"><i>Please fill in the empty space</i> is a performance, a lecture, a reading session, a film festival, a social media account and probably a few more things too. But most importantly, it’s a pretext to explore the immense expanse of question marks that is identity.
-          <br><i>Maqam</i> is the screening series part of <i>Please fill in the empty space</i>. It works as a small scale pilot, or a prelude to a long term initiative involving the curation and transmission of audio-visual material of all sorts from the MENA region. It's here to help revise the narrative in which individuals from that region have been included and addresses the bizarre general state of amnesia their heritages have been subject to.
-          Explore Maqam on Instagram: <a class="general" href="https://www.instagram.com/ma9am.tv" target="_blank">instagram.com/ma9am.tv</a></div>
+					Please fill in the empty space
+					<div id="technicalinfo"><i>Performance, video<br>2019</i></br></div>
+					<div id="text"><i>Please fill in the empty space</i> is a performance, a lecture, a reading session, a film festival, a social media account and probably a few more things too. But most importantly, it’s a pretext to explore the immense expanse of question marks that is identity.</div>
 
 			</div>
 
@@ -59,8 +61,8 @@
 Your browser does not support the video tag.
 </video>
 
-          <img id="pleasefillintheemptyspace1" src="images/pleasefillintheemptyspace1.jpg"/>
-          <img id="pleasefillintheemptyspace2" src="images/pleasefillintheemptyspace2.jpg"/>
+<!--           <img id="pleasefillintheemptyspace1" src="images/pleasefillintheemptyspace1.jpg"/>
+          <img id="pleasefillintheemptyspace2" src="images/pleasefillintheemptyspace2.jpg"/> -->
 
 			</div>
 
@@ -76,15 +78,15 @@ var dragging = false;
        e.preventDefault();
        
        dragging = true;
-       var bjorkvisuals = $('.bjorkvisuals');
+       var pleasefillintheemptyspacevisuals = $('.pleasefillintheemptyspacevisuals');
        var dragbar = $("#dragbar");
        var ghostbar = $('<div>',
                         {id:'ghostbar',
                          css: {
                                 height: dragbar.outerHeight(),
                                 width: dragbar.outerWidth(),
-                                top: bjorkvisuals.offset().top,
-                                bottom: bjorkvisuals.offset().bottom
+                                top: pleasefillintheemptyspacevisuals.offset().top,
+                                bottom: pleasefillintheemptyspacevisuals.offset().bottom
                                }
                         }).appendTo('body');
        

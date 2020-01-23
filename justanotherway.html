@@ -9,6 +9,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="HandheldFriendly" content="true">
 
+<!-- // jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script> window.jQuery || document.write('<script src="booklet/jquery-2.1.0.min.js"><\/script>') </script>
+
+<!-- // jQuery UI (optional) -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script> window.jQuery.ui || document.write('<script src="booklet/jquery-ui-1.10.4.min.js"><\/script>') </script>
+
+<!-- // Booklet -->
+<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="booklet/jquery.booklet.latest.min.js" type="text/javascript"></script>
+
+
 
 <body class="justanotherway">
 			
@@ -23,7 +36,7 @@
 
 					<div id="previous"><a class="general" href="corrupted.html">previous project</a></div>
 
-					<div id="next"><a class="general" href="womeninart.html">next project</a></div>
+					<div id="next"><a class="general" href="fearEU.html">next project</a></div>
 
 			</div>
 
@@ -33,7 +46,7 @@
 
           <div id="previous"><a class="general" href="corrupted.html">previous</a></div>
 
-          <div id="next"><a class="general" href="womeninart.html">next</a></div>
+          <div id="next"><a class="general" href="fearEU.html">next</a></div>
 
       </div>
 
@@ -50,17 +63,94 @@ The present book is a compilation of the most subjective compendium of analog co
 					</div>
 
 
-					<div id="dragbar"></div>
+	         <div id="dragbar"></div>
 
-<div class="justanotherwayvisuals">
-	
-	<img id="justanotherway1" src="images/justanother1.jpg"/>
-	<img id="justanotherway2" src="images/justanother2.jpg"/>
-	<img id="justanotherway3" src="images/justanother3.jpg"/>
+           <div class="justanotherwayvisuals">
+
+<div id="mybook" data-tooltip="This is a preview">
+
+    <div>
+      <img id="booklet-cover1" src="images/booklet-just/booklet-justcover.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just1" src="images/booklet-just/booklet-just1.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just2" src="images/booklet-just/booklet-just2.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just3" src="images/booklet-just/booklet-just3.jpg"/>
+    </div>
+      <div>
+        <img id="booklet-just4" src="images/booklet-just/booklet-just4.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just5" src="images/booklet-just/booklet-just5.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just6" src="images/booklet-just/booklet-just6.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just7" src="images/booklet-just/booklet-just7.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just8" src="images/booklet-just/booklet-just8.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just9" src="images/booklet-just/booklet-just9.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just10" src="images/booklet-just/booklet-just10.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just11" src="images/booklet-just/booklet-just11.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just12" src="images/booklet-just/booklet-just12.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just13" src="images/booklet-just/booklet-just13.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just14" src="images/booklet-just/booklet-just14.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just15" src="images/booklet-just/booklet-just15.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just16" src="images/booklet-just/booklet-just16.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just17" src="images/booklet-just/booklet-just17.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just18" src="images/booklet-just/booklet-just18.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just19" src="images/booklet-just/booklet-just19.jpg"/>
+    </div>
+    <div>
+        <img id="booklet-just20" src="images/booklet-just/booklet-just20.jpg"/>
+    </div>
+    <div>
+      <img id="booklet-cover2" src="images/booklet-just/booklet-justcover2.jpg"/>
+    </div>
 
 
 </div>
 
+
+
+
+
+
+
+	
+<!-- 	<img id="justanotherway1" src="images/justanother1.jpg"/>
+	<img id="justanotherway2" src="images/justanother2.jpg"/>
+	<img id="justanotherway3" src="images/justanother3.jpg"/> -->
+
+</div>
 
 
 </BODY>
@@ -100,6 +190,55 @@ var dragging = false;
            dragging = false;
        }
     });
+
+
+
+
+// $(function() {
+//     //single book
+//     $('#mybook').booklet();
+// });
+
+    // //multiple books with ID's
+    // $('#mybook1, #mybook2').booklet();
+
+    // //multiple books with a class
+    // $('.mycustombooks').booklet();
+
+
+    // page hover
+    // $('#mybook').booklet({
+    //     manual:   false,
+    //     overlays: true,
+    //     hovers:   true
+    // });
+
+    // $('#mybook').booklet({
+    //     pagePadding: 0
+    // });
+
+
+
+
+
+$(function() {
+
+    $('#mybook').booklet({
+        closed: true,
+        autoCenter: true,
+        tabs:  true,
+        width: '80%',
+        height: '100%',
+        shadows: true,
+        pagePadding: 0,
+        pageNumbers: false
+    });
+
+
+});
+
+
+
 
 
 </script>

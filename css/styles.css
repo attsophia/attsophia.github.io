@@ -30,10 +30,12 @@ title {
 }*/
 
 
+
+
 .floatingmenu {
 	position: absolute;
-	top: 15.9px; 
-	left: 15.9px;
+	top: 25px; 
+	left: 30px;
 	font-family: "Times New Roman";
 	font-size: 16px;
 	cursor: pointer;
@@ -117,6 +119,33 @@ a.general:hover {
 }
 
 
+a.maq:link {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a.maq:visited {
+	color: black;
+}
+
+a.maq:hover {
+	color: #f7c1f1;
+}
+
+
+.blinking{
+	animation:blinkingText 1.4s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	100%{	color: #000;	}
+}
+
+
+
 /*.active {
 	color: blue;
 }*/
@@ -128,8 +157,8 @@ a.general:hover {
 	width: 25%;
 	background-color: : #f1f1f1;
 	float: right;
-	right: 0px;
-	top: 0px;
+	right: 20px;
+	top: 10px;
 	padding-left: 1vw;
 	padding-right: 1vw;
 	font-family: "Times New Roman";
@@ -250,6 +279,11 @@ a.guest:hover {
 	line-height: 45px;
 	text-align: center;
 	margin-top: 5%;
+}
+
+#soon{
+	
+	color: gray;
 }
 
 
@@ -437,6 +471,69 @@ background-color: #e6e6e6;
 
 /*info for projects ends here*/
 
+/*maqam project starts here*/
+
+
+.maqam {
+	background-color: #f1f1f1;
+	position: relative;
+	z-index: 1000000;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+}
+
+
+.maqam-information {
+	padding: 10px;
+	width: 75%;
+
+}
+
+	@media screen and (max-width: 450px) {
+    .maqam-information {
+	font-size: 17px;
+	width: 94%;
+    }
+
+    }
+
+
+
+.maqamvisuals {
+	z-index: 10000;
+	position: absolute;
+	background-color: #f1f1f1;
+}
+
+
+
+.maqam img {
+	width: 49.80%;
+	height: auto;	
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .maqamvisuals img {
+        width: 100%;
+        background-position: center;
+        padding-right: 5px;
+    }
+
+}
+
+/*#maqam1 {
+	margin-left: 5px;
+}*/
+
+
+
+/*maqam project ends here*/
+
 
 /*please fill in project starts here*/
 
@@ -493,36 +590,6 @@ background-color: #e6e6e6;
 #pleasefillintheemptyspace1 {
 	margin-left: 5px;
 }
-
-
-
-
-
-/*.corruptedposters img {
-	width: 49.7%;
-	height: auto;
-	display: inline-block;
-}
-
-
-@media screen and (max-width: 1000px) {
-
-    .corruptedposters img {
-        width: 100%;
-        background-position: center;
-        margin-right: 5px;
-    }
-
-}
-
-.corruptedposters {
-	background-color: #f1f1f1;
-	z-index: 10000;
-	position: absolute;
-	padding-top: 10px;
-	padding-left: 5px;
-
-}*/
 
 
 /*please fill in project ends here*/
@@ -1034,14 +1101,18 @@ a.hyperfootl:hover {
 
 
 .justanotherway {
+
 	background-color: #f1f1f1;
-	position: relative;
+/*	position: relative;*/
 	height: auto;
 	padding: 0;
 	margin: 0;
-	width: 100%;
-	height: auto;
+/*	width: 100%;
+	height: auto;*/
+
 }
+
+
 
 
 .justanotherway-information {
@@ -1058,7 +1129,7 @@ a.hyperfootl:hover {
     }
 
 
-.justanotherwayvisuals img {
+/*.justanotherwayvisuals img {
 	width: 100%;
 	background-position: center;
 	height: auto;
@@ -1083,10 +1154,235 @@ a.hyperfootl:hover {
 	padding-top: 5px;
 	padding-left: 5px;
 
+}*/
+
+
+.justanotherwayvisuals {
+	background-color: #f1f1f1;
+	position: absolute;
+	z-index: 10000;
+	height: 100%;
+	width: 100%;
+}
+
+#mybook:hover {
+  text-decoration: none;
+}
+
+[data-tooltip],
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+[data-tooltip]:before,
+[data-tooltip]:after,
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 
+	  opacity 0.4s ease-in-out,
+		visibility 0.4s ease-in-out,
+		-webkit-transform 0.4s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	-moz-transition:    
+		opacity 0.4s ease-in-out,
+		visibility 0.4s ease-in-out,
+		-moz-transform 0.4s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+	transition:         
+		opacity 0.4s ease-in-out,
+		visibility 0.4s ease-in-out,
+		transform 0.4s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:before,
+[data-tooltip]:focus:after,
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before,
+[data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after,
+[data-tooltip]:after {
+  z-index: 1000;
+  padding: 6px;
+  width: 90px;
+  background-color: rgba(255,255,0,0.3);
+  color: black;
+  font-family: Helvetica;
+  content: attr(data-tooltip);
+  font-size: 11px;
+  text-align: center;
 }
 
 
 
+
+/*
+ * jQuery Booklet Plugin
+ * Copyright (c) 2010 - 2014 William Grauvogel (http://builtbywill.com/)
+ *
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Version : 1.4.4
+ *
+ * Originally based on the work of:
+ *	1) Charles Mangin (http://clickheredammit.com/pageflip/)
+ */
+	.booklet         {width:100%; height:auto; position:relative; top: 20px; margin:0 auto 20px; padding: 0; overflow:visible !important;}
+	.booklet .b-page {left:0; top:0; position:absolute; overflow:hidden; padding:0; outline:1px solid rgba(0,0,0,0);}
+	
+	.booklet .b-pN  {}
+	.booklet .b-p0  {}
+	.booklet .b-p1  {}
+	.booklet .b-p2  {}    
+	.booklet .b-p3  {}
+	.booklet .b-p4  {}
+	   
+   	/* Page Wrappers */
+	.booklet .b-wrap       {top:0; position:absolute;}
+/*	.booklet .b-wrap-left  {background:#fff;}
+	.booklet .b-wrap-right {background:#efefef;}*/
+	
+	.booklet .b-pN .b-wrap,
+	.booklet .b-p1 .b-wrap,
+	.booklet .b-p2 .b-wrap,
+	.booklet .b-p3 .b-wrap,
+	.booklet .b-p4 .b-wrap  {left:0;}
+	.booklet .b-p0 .b-wrap  {right:0;}
+	
+   	/* Custom Page Types */
+	.booklet .b-page-blank  {padding:0; width:100%; height:100%;}
+	.booklet .b-page-cover  {padding:0; width:100%; height:100%; background:#925C0E;}
+	.booklet .b-page-cover h3  {color:#fff; text-shadow:0 1px 3px #222;}
+   
+   	/* Page Numbers */
+	.booklet .b-counter {bottom:10px; position:absolute; display:block; width:25px; height:20px; background:#ccc; color:#444; text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-size:10px; padding:5px 0 0;}
+	.booklet .b-wrap-left  .b-counter  {left:10px;}
+	.booklet .b-wrap-right .b-counter {right:10px;}
+   
+   	/* Page Shadows */
+/*	.booklet .b-shadow-f  {right:0; top:0; position:absolute; opacity:0; background-image:url("../images/shadow-top-forward.png"); background-repeat:repeat-y; background-position:100% 0;}
+	.booklet .b-shadow-b  {left:0;  top:0; position:absolute; opacity:0; background-image:url("../images/shadow-top-back.png");    background-repeat:repeat-y; background-position:0 0;}*/
+/*	
+	.booklet .b-p0 {background-image:url("../images/shadow.png"); background-repeat:repeat-y; background-position:100% 10px;}
+	.booklet .b-p3 {background-image:url("../images/shadow.png"); background-repeat:repeat-y; background-position:0 10px;}*/
+	
+   	/* Overlay Controls */
+	.booklet .b-grab     {cursor: url("../images/openhand.cur"), default;}
+	.booklet .b-grabbing {cursor: url("../images/closedhand.cur"), default;}
+	
+   	/* Overlay Controls */
+	.booklet .b-overlay      {top:0; position:absolute; height:100%; width:50%;}
+	.booklet .b-overlay-prev {left:0;}
+	.booklet .b-overlay-next {right:0;}
+	
+   	/* Tab Controls */
+	.booklet .b-tab        {background:gray; height:40px; width:100%; padding:10px 0 0; text-align:center; color:black; position:absolute; font-size:13px;}
+	.booklet .b-tab-prev   {left:0;}
+	.booklet .b-tab-next   {right:0;}
+	.booklet .b-tab:hover  {background:#aaa; color:#000;}	
+	
+   	/* Arrow Controls */
+	.booklet .b-arrow          {display:block; position:absolute; text-indent:-9999px; top:0; height:100%; width:74px;}
+	.booklet .b-arrow div      {display:none; text-indent:-9999px; height:170px; width:74px; position:absolute; left:0; top:25%;}
+	.booklet .b-arrow-next     {right:-80px;}
+	.booklet .b-arrow-prev     {left:-80px;}
+	.booklet .b-arrow-next div {background:url("images/arrow-next.png") no-repeat left top;}
+	.booklet .b-arrow-prev div {background:url("images/arrow-prev.png") no-repeat left top;}
+		
+/* @z-index fix (needed for older IE browsers)
+----------------------------------------*/
+
+    body              {z-index:0;}
+    .b-menu           {z-index:100;}
+    .b-selector       {z-index:100;}
+    .booklet          {z-index:10;}
+    .b-pN             {z-index:10;}
+    .b-p0             {z-index:30;}
+    .b-p1             {z-index:20;}
+    .b-p2             {z-index:20;}
+    .b-p3             {z-index:30;}
+    .b-p4             {z-index:10;}
+    .b-prev           {z-index:40;}
+    .b-next           {z-index:40;}
+    .b-counter        {z-index:40;}
+	
+/* @Menu Items
+----------------------------------------*/
+	.b-menu {height:40px; padding:0 0 10px;}
+	
+	.b-selector             {height:40px; position:relative; float:right; border:none; color:#cecece; cursor:pointer; font:normal 12px "Myriad Pro", Myriad, "DejaVu Sans Condensed","Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+	.b-selector .b-current  {padding:8px 15px 12px; line-height:20px; min-width:18px; height:20px; display:block; background:#000; text-align:center;}
+	.b-selector-page        {width:auto; margin-left:15px;}
+	.b-selector-chapter     {width:auto;}
+	
+	.b-selector:hover            {color:#fff; background-position:left 0;}
+	.b-selector:hover .b-current {background-position:right 0;}
+	.b-selector ul               {overflow:hidden; margin:0; list-style:none !important; position:absolute; top:40px; right:0; padding:0 0 10px; background:#000; width:240px;}
+	.b-selector li               {border:none;}
+	.b-selector a                {color:#cecece; height:14px; text-decoration:none; display:block; padding:5px 10px;}
+	.b-selector a .b-text        {float:left; clear:none;}
+	.b-selector a .b-num         {float:right; clear:none;}
+	.b-selector a:hover          {color:#fff;}
+		
+html, .justanotherway { height: 100%; width: 100%; margin: 0; }
+
+#mybook img {
+    width: 100%;
+
+}
+
+#tail {
+	z-index: 10000;
+}
+
+ #mybook{
+/* 	box-shadow: 0px 4px 20px #636363;*/
+/* 	height: auto;*/
+ 	
+ }
+
+.thing .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.thing:hover .tooltiptext {
+  visibility: visible;
+}
 
 /*just another way project ends here*/
 
@@ -1305,6 +1601,10 @@ a.hyperfootl:hover {
 	width: 100%;
 	height: auto;
 	overflow-x: hidden;
+}
+
+#tail {
+	position: absolute;
 }
 
 
