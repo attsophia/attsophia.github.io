@@ -1179,6 +1179,16 @@ a.hyperfootl:hover {
 	width: 100%;
 }
 
+
+#brochure {
+	position: absolute;
+	width: 38%;
+	top: 10%;
+	z-index: 1;
+	left:24%;
+ 	box-shadow: 0px 4px 20px #636363;
+}
+
 #mybook:hover {
   text-decoration: none;
 }
