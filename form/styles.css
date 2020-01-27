@@ -103,12 +103,21 @@ a:visited {
 	text-align: center;
   margin: auto;
   width: 40%;
+  line-height: 56px;
 
 /*  position: absolute;*/
 
 }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 800px) {
+    #title {
+/*  width: 100%;*/
+  font-size: 200px;
+    }
+
+    }
+
+        @media screen and (max-width: 1200px) {
     #title {
   width: 70%;
     }
@@ -122,8 +131,8 @@ a:visited {
   background-color: #669083;
   border-radius: 50%;
   display: inline-block;
-  margin-top: 120px;
-  margin-left: 120px;
+  margin-top: 9%;
+  margin-left: 10%;
   position: absolute;
   cursor: move;
   z-index: 999;
@@ -214,7 +223,7 @@ box-shadow: 6px 8px 12px -6px rgba(0,0,0,0.68);*/
 
 
 #flag {
-  width: 200px;
+  width: 13%;
   margin-top: 50px;
   margin-left: 30px;
   display: inline-block;
@@ -222,6 +231,14 @@ box-shadow: 6px 8px 12px -6px rgba(0,0,0,0.68);*/
   position: absolute;
 
 }
+
+    @media screen and (max-width: 1200px) {
+    #flag {
+  width: 120px;
+    }
+
+    }
+
 
 .floatingflag {
   width: 180px;
@@ -281,6 +298,15 @@ textarea {
   /* To give enough room to type some text */
   height: 5em;
 }
+
+    @media screen and (max-width: 1200px) {
+    input {
+  width: 82%;
+    }
+
+    }
+
+
 
 .button {
   /* margin between inputfield and button */

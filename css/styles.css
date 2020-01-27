@@ -568,7 +568,7 @@ background-color: #e6e6e6;
 }
 
 	@media screen and (max-width: 450px) {
-    .bjork-information {
+    .pleasefillintheemptyspace-information {
 	font-size: 16px;
 	width: 94%;
     }
@@ -964,6 +964,18 @@ a.hyperfootl:hover {
 	display: inline-block;
 	background-color: black;
 }
+
+
+@media screen and (max-width: 1000px) {
+
+    .pppvisuals img {
+  object-fit: cover;       /* Scale the image so it covers whole area, thus will likely crop */
+  object-position: center; /* Center the image within the element */
+    }
+
+}
+
+
 
 
 /*past present past project ends here*/
