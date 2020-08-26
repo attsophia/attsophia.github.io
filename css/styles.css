@@ -540,6 +540,14 @@ background-color: #e6e6e6;
 
 }
 
+#maqam5 {
+	width: 100%;
+}
+
+/*.maqam6 {
+	width: 30%;
+}*/
+
 /*#maqam1 {
 	margin-left: 5px;
 }*/
@@ -2460,6 +2468,107 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 
 /*art manifesto generator project ends here*/
+
+
+/*untagged project starts here*/
+
+
+
+.untagged {
+	background-color: #f1f1f1;
+	position: absolute;
+	z-index: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	overflow: none;
+}
+
+
+.untaggedinformation {
+	width: 80%;
+	padding: 10px;
+}
+
+	@media screen and (max-width: 450px) {
+    .untaggedinformation {
+	font-size: 16px;
+	width: 94%;
+    }
+
+    }
+
+
+
+
+.untaggedgraphics {
+	background-color: white;
+	position: absolute;
+}
+
+
+#untagged1 {
+	background-color: white;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 38.3%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 8px;
+    
+}
+
+
+/*.untaggedgraphics img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 0;
+  position: relative;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .untaggedgraphics img {
+        width: 100%;
+        background-position: center;
+        margin-right: 5px;
+    }
+
+}*/
+
+/*#separation {
+	background-color: white;
+	text-align: center;
+	font-family: "Helvetica";
+	font-size: 10px;
+	padding-top: 180px;
+	padding-bottom: 180px;
+}
+
+
+#untagged2 {
+	width: 33.1%;
+	display: inline-block;
+}
+
+#untagged3 {
+	width: 33.1%;
+	display: inline-block;
+}
+
+#untagged4 {
+	width: 33.1%;
+	display: inline-block;
+
+}*/
+
+/*untagged project ends here*/
+
 
 
 
