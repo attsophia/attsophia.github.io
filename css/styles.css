@@ -2503,13 +2503,14 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
 
 
 .untaggedgraphics {
-	background-color: white;
+ background: linear-gradient(white 40%, black 70%);
 	position: absolute;
+
 }
 
 
 #untagged1 {
-	background-color: white;
+/*s*/
 	display: block;
 	margin-left: auto;
     margin-right: auto;
@@ -2517,6 +2518,59 @@ html, .justanotherway { height: 100%; width: 100%; margin: 0; }
     margin-top: 0;
     position: relative;
     padding-top: 8px;
+/*    	margin-top: 200px;*/
+    
+}
+
+#untagged2 {
+/*	background-color: white;*/
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 38.3%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 8px;
+    	margin-top: 200px;
+    
+}
+
+#untagged3 {
+/*	background-color: white;*/
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 38.3%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 8px;
+    	margin-top: 200px;
+    
+}
+
+#untagged4 {
+/*	background-color: white;*/
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 38.3%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 8px;
+    	margin-top: 200px;
+    
+}
+
+#untagged5 {
+/*	background-color: white;*/
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    width: 38.3%;
+    margin-top: 0;
+    position: relative;
+    padding-top: 8px;
+    	margin-top: 200px;
     
 }
 
