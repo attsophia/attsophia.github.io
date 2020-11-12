@@ -16,7 +16,7 @@ title {
 
 
 
-/*@font-face {
+@font-face {
   font-family: "SplendidScript";
   src: local(font name), url("../fonts/SplendidScript.ttf");
   src: url("../fonts/SplendidScript.eot");
@@ -27,7 +27,7 @@ title {
        url("../fonts/SplendidScript.eot?#iefix") format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
-}*/
+}
 
 
 
@@ -61,7 +61,7 @@ title {
 	margin: 25px;
 	margin-top: 0;
 	top: 0;
-	padding-top: 48px;
+	padding-top: 64px;
 	padding-bottom: 20px;
 	left: 0;
 	font-size: 16px;
@@ -184,8 +184,8 @@ a.maq:hover {
 
 
   	color: #e52421;
-  	font-family: Times New Roman, serif;
-  	font-size: 17px;
+  	font-family: "SplendidScript", serif;
+  	font-size: 36px;
 
 }
 
@@ -246,6 +246,15 @@ a.maq:hover {
     }
 
     }
+
+	@media screen and (max-width: 780px) {
+    .submenu p {
+	z-index: 2000000;
+    }
+
+    }
+
+
 
 /*    @media screen and (max-width: 800px) and (min-width: 449px) {
     .submenu {
