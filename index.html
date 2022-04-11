@@ -77,23 +77,53 @@
 
 
 
+
     $(document).ready(function() {   
 
 
 			$(function(){
-				
-				$("#work").click(function(){
-					
-					$(".workmenu").toggle();
-					
-				});
-			
+
+
 				
 				$("#about").click(function(){
 					
 					$(".aboutmenu").toggle();
 					
 				});
+
+
+			});
+
+
+			 });
+
+
+
+    $(document).ready(function() {   
+
+
+			$(function(){
+
+				
+				$("#work").click(function(){
+					
+					$(".workmenu").toggle();
+					
+				});
+
+			});
+
+
+			 });
+
+
+
+
+
+    $(document).ready(function() {   
+
+
+			$(function(){
 				
 				
 				$("#contact").click(function(){
@@ -102,55 +132,125 @@
 					
 				});
 
+
+			});
+
+
+			 });
+
+
+
+    $(document).ready(function() {   
+
+
+			$(function(){
+
 				
 				$("#more").click(function(){
 					
 					$(".moremenu").toggle();
 					
 				});
-				
+
+
 			});
 
 
+			 });
 
-			var favicon_images = [
-                    'images/output/tmp-0.gif',
-                    'images/output/tmp-1.gif',
-                    'images/output/tmp-2.gif',
-                    'images/output/tmp-3.gif',
-                    'images/output/tmp-4.gif',
-                    'images/output/tmp-5.gif',
-                    'images/output/tmp-6.gif',
-                    'images/output/tmp-7.gif',
-                    'images/output/tmp-8.gif',
-                    'images/output/tmp-9.gif',
-                    'images/output/tmp-10.gif',
-                    'images/output/tmp-11.gif',
-                    'images/output/tmp-12.gif',
-                    'images/output/tmp-13.gif',
-                    'images/output/tmp-14.gif',
-                    'images/output/tmp-15.gif',
-                    'images/output/tmp-16.gif',
-                    'images/output/tmp-17.gif',
-                    'images/output/tmp-18.gif'
-                ],
-    image_counter = 0; // To keep track of the current image
 
-setInterval(function() {
-    $("link[rel='icon']").remove();
-    $("link[rel='shortcut icon']").remove();
-    $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+
+				
+
+// this is where i tell the table to fetch a different color at each refresh
+
+
+    $(document).ready(function() {   
+
+			$(function(){
+
+var bgcolorlist=new Array("#fffece", "#f9dce1", "#b5b992", "#a3957f", "#c7e6c7", "#eae0c9", "#979ad9")
+
+$("#worktable th").css("background-color",bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)]);
+
+});
+	  });
+
+
+// // this is where I link to the work pages from the index page
+
+
+    $(document).ready(function() {   
+
+ $(".tr-maqam").click(function(){
+   window.location = "maqam.html";
+ });
+
+ $(".tr-please").click(function(){
+   window.location = "pleasefillintheemptyspace.html";
+ });
+
+ $(".tr-just").click(function(){
+   window.location = "justanotherway.html";
+ });
+
+ $(".tr-textmay").click(function(){
+   window.location = "thesis.html";
+ });
+
+ $(".tr-pastpresent").click(function(){
+   window.location = "pastpresentpast.html";
+ });
+
+ $(".tr-fearEU").click(function(){
+   window.location = "fearandloathingintheeu.html";
+ });
+
+
+  });
+
     
-	// If last image then goto first image
-	// Else go to next image    
-	if(image_counter == favicon_images.length -1)
-        image_counter = 0;
-    else
-        image_counter++;
-}, 10);
 
 
-    });
+// 			var favicon_images = [
+//                     'images/output/tmp-0.gif',
+//                     'images/output/tmp-1.gif',
+//                     'images/output/tmp-2.gif',
+//                     'images/output/tmp-3.gif',
+//                     'images/output/tmp-4.gif',
+//                     'images/output/tmp-5.gif',
+//                     'images/output/tmp-6.gif',
+//                     'images/output/tmp-7.gif',
+//                     'images/output/tmp-8.gif',
+//                     'images/output/tmp-9.gif',
+//                     'images/output/tmp-10.gif',
+//                     'images/output/tmp-11.gif',
+//                     'images/output/tmp-12.gif',
+//                     'images/output/tmp-13.gif',
+//                     'images/output/tmp-14.gif',
+//                     'images/output/tmp-15.gif',
+//                     'images/output/tmp-16.gif',
+//                     'images/output/tmp-17.gif',
+//                     'images/output/tmp-18.gif'
+//                 ],
+//     image_counter = 0; // To keep track of the current image
+
+// setInterval(function() {
+//     $("link[rel='icon']").remove();
+//     $("link[rel='shortcut icon']").remove();
+//     $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+    
+// 	// If last image then goto first image
+// 	// Else go to next image    
+// 	if(image_counter == favicon_images.length -1)
+//         image_counter = 0;
+//     else
+//         image_counter++;
+// }, 10);
+
+
+   
 
 
 
@@ -182,19 +282,19 @@ setInterval(function() {
 
 	</div>
 
-		<div class="floatingmenu">
+							<div class="floatingmenu">
 
 			
-			<div id="work"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">work</span></div>
-			
 			<div id="about"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">about</span></div>
+
+			<div id="work"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">work</span></div>
 			
 			<div id="contact"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">contact</span></div>			
 
 			<div id="more"><span onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'">more</span></div>
 
 
-		</div>
+							</div>
 
 <!-- 		<div class="marquee">
 
@@ -210,54 +310,32 @@ setInterval(function() {
 
 		<div class="movinghome"><span>Sophia Attigui's personal web page</span></div>
 
-		<div class="submenu">
+<div class="submenu">
 			
-			<div class="workmenu">
-				
+
+
+
+							<div class="aboutmenu">
+
 				<p>
 
-				<div id="nine"><a class="general" href="maqam.html">09. Maqam.tv</a></div>	
+I am an artist, curator, educator and graphic designer currently based in Casablanca, Morocco. 
+<br><br>
+Recently, I was a participant at the postgraduate Curatorial Studies program from KASK School of Arts, in Ghent, Belgium. I stopped by a few other cities before that: Paris, Brussels and Den Haag, got a first bachelor in contemporary art, philosophy of art and aesthetics (Univ. Paris VIII Vincennes—Saint-Denis) and a second one in fine arts, majoring in graphic design and minoring in film (ERG Brussels/KABK Den Haag), then got a masters in fine arts, with the same major again (KASK Ghent). I have worked with <a class="general" href="https://www.wiels.org/" target="_blank">WIELS</a>, <a class="general" href="https://kunsthal.gent/" target="_blank">Kunsthal Ghent</a>, <a class="general" href="https://underthechurchtower.org/" target="_blank">Under the Tower</a> and <a class="general" href="http://davidrudnick.org/" target="_blank">Terrain</a>, among others.  
+<br><br>
+Right now, most of my working hours are spent making my writing, performance and curatorial practices sink into each other and obsessing over moving image for the likes of my broadcast channel <a class="general" href="https://www.instagram.com/maqam.tv/" target="_blank">Maqam.tv</a>. But I’ll do a whole bunch of other stuff too. 
+<br><br>
+Every now and then, I’ll stretch my brain into the difficult task of outlining the body of my work in just a few sentences. It might really just make sense to me alone, but here’s the latest take on it: I think of my approach to theory, art, design and curation as indivisible from matters of time and space. I am concerned on the one hand with the time and space of research and investigation, conceptualization and production, access and reception, and, on the other hand, with the time and space of what has been, what it is and what it is to become. These engage in processes of alteration, reflection and refraction, which makes it eventually quasi-impossible to isolate concept, methodology, performance and object. This is because I find it interesting to push against the boundaries of the most widely accepted —in terms of timelines, narratives and landscapes— and somehow think of all this as one sort of storytelling, or as the documentary genre revisited.
 
-				<div id="eight"><a class="general" href="pleasefillintheemptyspace.html">08. Please fill in the empty space</a></div>
+<div class="waviy"><!-- I also have a very simple way to sort out my work: find my <span style="--i:1">c</span><span style="--i:2">u</span><span style="--i:3">r</span><span style="--i:4">r</span><span style="--i:5">i</span><span style="--i:6">c</span><span style="--i:7">u</span><span style="--i:8"></span><span style="--i:9">l</span><span style="--i:10">u</span><span style="--i:11">m</span>
+   <span style="--i:12">v</span><span style="--i:13">i</span><span style="--i:14">t</span><span style="--i:15">a</span><span style="--i:16"></span><span style="--i:17">e</span> as a google sheet here.  -->
+				
+</p>
+							</div>
 
-				<div id="seven"><a class="general" href="thesis.html">07. Text may contain: time, space, <br>utopia, nostalgia and one or more people</a></div>
+					<!-- Sophia Attigui (b. 1993, <a class="general" href="https://www.google.com/maps/place/Casablanca,+Morocco/@33.5720635,-7.6574287,12z/data=!3m1!4b1!4m5!3m4!1s0xda7cd4778aa113b:0xb06c1d84f310fd3!8m2!3d33.5731104!4d-7.5898434" target="_blank">Casablanca, Morocco</a>) is an artist, curator and graphic designer developping a practice carved out of the popular, the cultural, the historical, the philosophical and the political –to which she tries to add a somewhat necessary dose of fantasy. These past two years or so, she has been pushing further the interlacing of areas, and eras too, in order to allow new understandings of the widely accepted –timelines, narratives, landscapes.Currently residing between Casablanca and Brussels and a recent participant at the Curatorial Studies postgraduate pogram at KASK School of Arts in Ghent. -->
 
-				<div id="six"><a class="general" href="pastpresentpast.html">06. Past, present, past</a></div>
-
-<!-- 				<div id="seven"><a class="general" href="corrupted.html">07. Corrupted space</a></div> -->
-
-				<div id="five"><a class="general" href="justanotherway.html">05. Just another way to say it</a></div>
-
-<!-- 				<div id="six"><a class="general" href="womeninart.html">06. Women in art (school)</a></div> -->
-
-				<div id="four"><a class="general" href="fearandloathingintheeu.html">04. Fear and loathing in the EU</a></div>
-
-				<div id="three"><a class="general" href="beenthinking.html">03. I've been thinking</a></div>
-
-<!-- 				<div id="five"><a class="general" href="hall.html">05. The Work of Representation</a></div> -->
-
-				<div id="two"><a class="general" href="generator.html">02. Manifestos: a generator</a></span></div>				
-
-				<div id="one"><a class="general" href="served.html">01. Served aside</a></span></div>
-
-<!-- 				<div id="zero"><a class="general" href="untagged.html">00. Untagged (a deposit)</a></span></div> -->
-<!-- 
-				<div id="one"><a class="general" href="notavailable.html">01. Not available festival</a></div> -->
-
-<!-- 				<div id="one"><a class="general" href="bjork.html">01. An homage: All is full of Love</a></div>		 -->	
-
-
-
-				</p>
-
-			</div>
-
-
-			<div class="aboutmenu">
-
-				<p>Sophia Attigui (b. 1993, <a class="general" href="https://www.google.com/maps/place/Casablanca,+Morocco/@33.5720635,-7.6574287,12z/data=!3m1!4b1!4m5!3m4!1s0xda7cd4778aa113b:0xb06c1d84f310fd3!8m2!3d33.5731104!4d-7.5898434" target="_blank">Casablanca, Morocco</a>) is an artist, curator and graphic designer developping a practice carved out of the popular, the cultural, the historical, the philosophical and the political –to which she tries to add a somewhat necessary dose of fantasy. These past two years or so, she has been pushing further the interlacing of areas, and eras too, in order to allow new understandings of the widely accepted –timelines, narratives, landscapes. <!-- developing a research-based practice mainly focused on culture, technology, cybernetics, politics and the perception we build upon those matters. --> <br>Currently residing in <a class="general" href="https://www.google.fr/maps/place/Bruxelles,+Belgique/@50.8549541,4.3053509,12z/data=!3m1!4b1!4m5!3m4!1s0x47c3a4ed73c76867:0xc18b3a66787302a7!8m2!3d50.8503396!4d4.3517103" target="_blank">Brussels</a> and a participant at the Curatorial Studies postgraduate pogram at KASK School of Arts in Ghent.
-
-				<br></br>
+<!-- 				<br></br>
 				Education: 
 				<br>KASK School of Arts, Ghent <sup>(BE)</sup></br>
 				Royal Academy of Art KABK, The Hague <sup>(NL)</sup> 
@@ -272,42 +350,104 @@ setInterval(function() {
 				<br><a class="general" href="https://www.horstartsandmusic.com/" target="_blank">HORST Music and Arts, Brussels</a> <sup>(BE)</sup> 
  				<br><a class="general" href="http://davidrudnick.org/" target="_blank">David Rudnick, Ghent</a> <sup>(BE)</sup> 
 				<br><a class="general" href="https://a-wake.world" target="_blank">(A)wake, Rotterdam</a> <sup>(NL)</sup> 
-
-<br><a class="general" href="mailto:sophia.attigui@gmail.com" target="_blank">
- <div class="waviy">
-   <span style="--i:1">R</span><span style="--i:2">e</span><span style="--i:3">q</span><span style="--i:4">u</span><span style="--i:5">e</span><span style="--i:6">s</span><span style="--i:7">t</span><span style="--i:8"></span>
-   <span style="--i:9">e</span><span style="--i:10">x</span><span style="--i:11">t</span><span style="--i:12">e</span><span style="--i:13">n</span><span style="--i:14">d</span><span style="--i:15">e</span><span style="--i:16">d</span><span style="--i:17"></span>
-   <span style="--i:18">r</span><span style="--i:19">e</span><span style="--i:20">s</span><span style="--i:21">u</span><span style="--i:22">m</span><span style="--i:233">é</span>
-</a>
+ -->
 
 
-				
-</p>
-			</div>
+
+
+
+						</div>
+
+
+
+							<div class="workmenu">
+
+
+
+<table id="worktable">
+
+  <tr>
+    <th>Project</th>
+    <th>Type</th>
+    <th>Year</th>
+  </tr>
+
+  <tr class="tr-maqam">
+    <td>Maqam.tv</td>
+    <td>Film curation, design</td>
+    <td>Ongoing</td>
+  </tr>
+
+
+  <tr class="tr-please">
+    <td>Please fill in the empty space</td>
+    <td>Performance, video installation, design</td>
+    <td>2022</td>
+  </tr>
+
+  <tr class="tr-just">
+    <td>Just another way to say it</td>
+    <td>Book editing, design</td>
+    <td>2022</td>
+  </tr>
+
+  <tr class="tr-textmay">
+    <td>Text may contain: time, space, utopia, nostalgia and one or more people</td>
+    <td>Writing</td>
+    <td>2019</td>
+  </tr>
+
+  <tr class="tr-pastpresent">
+    <td>Past, present;0000</td>
+    <td>Perfomance, installation, design</td>
+    <td>2019</td>
+  </tr>
+
+  <tr class="tr-fearEU">
+    <td>Fear and loathing in the EU</td>
+    <td>Website, design</td>
+    <td>2018</td>
+  </tr>
+
+   <tr>
+    <td>Browse more <i>(more soon)</i></td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+
+</table>
+
+
+		
+								</div>
+
 
 			<div class="contactmenu">
 
-				<p>Never not available for freelance services, collaborations <br>and casual chats at:
+				<p>Never not available for collaborations, freelance curatorial, educational and design services and casual chats at:
 				<a class="general" href="mailto:sophia.attigui@gmail.com" target="_blank">sophia.attigui@gmail.com</p>
 			
 			</div>
+
+
 
 			<div class="moremenu">
 				
 				<p>
 
-				<a class="general" href="https://www.instagram.com/atsophia" target="_blank">irl</a> 
+				<a class="general" href="https://www.instagram.com/sophiaattigui" target="_blank">irl</a> 
+				<br><a class="general" href="https://cluster123456.tumblr.com/" target="_blank">maqam.tv</a>
 				<br><a class="general" href="https://cluster123456.tumblr.com/" target="_blank">Another cluster</a>
 				<!-- <a class="general" href="things.html" target="_blank">Things</a> -->
-				<br><a class="general" href="mail.html" target="_blank">Subscribe to the mailing list</a>
-				<!-- <br><a class="guest" href="guestbook.html" target="_blank">Guestbook</a></div> -->
+				<br><a class="general" href="mail.html" target="_blank">Subscribe to the mailing list <i>(soon)</i></a>
+				<br><!-- <a class="guest" href="guestbook.html" target="_blank"> -->Guestbook <i>(soon)</i><!-- </a> --></div>
 
 				</p>
 
 			</div>
 
 
-		</div>
+</div>
 
 
 
