@@ -733,6 +733,37 @@ background-color: #e6e6e6;
 /*please fill in project starts here*/
 
 
+.pleasecontent {
+	/*background-color: #f8eaf3;*/
+  background-image: linear-gradient(#f1f1f1, #f8eaf3, 70%, #efe663);
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 10000;
+	height: auto;
+	width: 100%;
+}
+
+.pleasecontent p {
+/*	width: 70%;*/
+	padding-right: 15px;
+	padding-left: 50px;
+	padding-bottom: 50px;
+	height: auto;
+	color: black;
+	font-size: 22px;
+}
+
+	@media screen and (max-width: 450px) {
+    .pleasecontent p {
+	font-size: 15px;
+	width: auto;
+	padding-left: 20px;
+    }
+
+    }
+
+
 .pleasefillintheemptyspace {
 	background-color: #f1f1f1;
 	position: relative;
@@ -759,7 +790,7 @@ background-color: #e6e6e6;
 
 
 
-.pleasefillintheemptyspacevisuals {
+/*.pleasefillintheemptyspacevisuals {
 	z-index: 10000;
 	position: absolute;
 }
@@ -786,7 +817,7 @@ background-color: #e6e6e6;
 #pleasefillintheemptyspace1 {
 	margin-left: 5px;
 }
-
+*/
 
 /*please fill in project ends here*/
 
