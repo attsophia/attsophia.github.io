@@ -735,7 +735,7 @@ background-color: #e6e6e6;
 
 .pleasecontent {
 	/*background-color: #f8eaf3;*/
-  background-image: linear-gradient(#f1f1f1, #f8eaf3, 70%, #efe663);
+  background-image: linear-gradient(#f1f1f1, 15%, #ebc2db, #efe663);
 	position: absolute;
 	margin: 0;
 	padding: 0;
@@ -750,6 +750,7 @@ background-color: #e6e6e6;
 	padding-left: 50px;
 	padding-bottom: 50px;
 	height: auto;
+	width: 70%;
 	color: black;
 	font-size: 22px;
 }
