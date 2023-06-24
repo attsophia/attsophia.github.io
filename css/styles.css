@@ -669,9 +669,10 @@ background-color: #e6e6e6;
 
 
 .maqam img {
-	width: 49.80%;
+	width: 100%;
 	height: auto;	
 	display: inline-block;
+        background-position: center;
 }
 
 
@@ -685,7 +686,7 @@ background-color: #e6e6e6;
 
 }
 
-#maqam5 {
+/*#maqam5 {
 	width: 49.8%;
 }
 
