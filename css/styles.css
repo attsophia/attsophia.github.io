@@ -37,7 +37,8 @@ title {
 	top: 33px;
 	left: 39px;
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 15px;
+	line-height: 1,2px;
 	cursor: pointer;
 }
 
@@ -56,7 +57,7 @@ title {
 
 	@media screen and (max-width: 780px) {
     .floatingmenu {
-    position: fixed;
+  position: fixed;
 	width: 100%;
 	margin: 25px;
 	margin-top: 0;
@@ -236,7 +237,7 @@ a.maq:hover {
 
 .submenu {
 	position: absolute;
-	width: 65%;
+	width: 58%;
 	background-color: : #f1f1f1;
 	top: 15px;
 	left: 220px;
@@ -288,31 +289,22 @@ a.maq:hover {
 
 .aboutmenu {
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 15.5px;
+	line-height: 22px;
+	letter-spacing: 0.3px;
 /*	display: none;*/
 }
 
-	@media screen and (max-width: 780px) {
-    .aboutmenu {
-	font-size: 16px;
-    }
-
-    }
 
 .workmenu {
 	right: 0px;
 /*	top: 0px;*/
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 15.5px;
+	line-height: 22px;
+	letter-spacing: 0.3px;
 	display: none;
 }
-
-	@media screen and (max-width: 780px) {
-    .workmenu {
-	font-size: 16px;
-    }
-
-    }
 
 
 #worktable {
@@ -358,31 +350,19 @@ a.maq:hover {
 
 .contactmenu {
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 15.5px;
+	line-height: 22px;
+	letter-spacing: 0.3px;
 	display: none;
 }
 
-	@media screen and (max-width: 780px) {
-    .contactmenu {
-	font-size: 16px;
-    }
-
-    }
 
 .moremenu {
 	font-family: "Times New Roman";
-	font-size: 16px;
+	font-size: 15.5px;
+	line-height: 22px;
 	display: none;
 }
-
-	@media screen and (max-width: 780px) {
-    .moremenu {
-	font-size: 16px;
-    }
-
-    }
-
-
 
 
 .guest {
