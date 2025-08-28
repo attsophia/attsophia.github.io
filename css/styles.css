@@ -30,6 +30,18 @@ title {
 }
 
 
+@font-face {
+    font-family: 'BM';
+    src: url('../fonts/BM.woff2') format('woff2'),
+        url('../fonts/BM.woff') format('woff'),
+        url('../fonts/BM.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 
 
 .floatingmenu {
@@ -237,7 +249,7 @@ a.maq:hover {
 
 .submenu {
 	position: absolute;
-	width: 58%;
+	width: 56%;
 	background-color: : #f1f1f1;
 	top: 15px;
 	left: 220px;
@@ -303,7 +315,7 @@ a.maq:hover {
 	font-size: 15.5px;
 	line-height: 22px;
 	letter-spacing: 0.3px;
-	display: none;
+/*	display: none;*/
 }
 
 
@@ -320,25 +332,37 @@ a.maq:hover {
 #worktable td{
   border: 1px solid #ddd;
   border-style: none;
-  padding: 8px;
+  padding: 14px;
 
 }
 
-
-/*#worktable tr:nth-child(even){background-color: #f2f2f2;}
-
-#worktable tr:hover {background-color: #ddd;}*/
 
 #worktable tr:hover {
    background-color: #dcdcdc;
    cursor: pointer;
 }
 
+/* Specific overrides */
+#worktable tr.tr-smagh:hover {
+  cursor: progress;
+}
+
+#worktable tr.tr-teaching:hover {
+  cursor: progress;
+}
+
+#worktable tr.tr-exe:hover {
+  cursor: progress;
+}
+
+#worktable tr.tr-ndda:hover {
+  cursor: progress;
+}
 
 #worktable th {
   border:  none;
   font-weight: normal;
-  padding: 8px;
+  padding: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -465,6 +489,58 @@ a.guest:hover {
 	top: 0 !important;
 	padding: 0 0 0 0 !important;
 }
+
+
+.teaching {
+	background-color: white;
+	margin: 0;
+	font-family: Arial;
+  font-size: 13.5px;
+  line-height: 18px;
+
+}
+
+a.teach:visited { 
+ text-decoration: none; 
+ color: blue;
+}
+
+.teaching-toolkit {
+	background-color: #ca5a24;
+}
+
+.teaching-text {
+	color: #acdce8;
+	margin: 0;
+	font-family: Arial;
+  font-size: 22px;
+  line-height: 29px;
+  width: 80%;
+  padding: 30px;
+}
+
+.teaching-anti {
+	background-color: #6d9b4d;
+}
+
+
+main {
+	margin: 15px;
+}
+
+.box {
+  width: 320px;
+  height: 320px;
+  padding: 13px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+  background-color: transparent;
+
+  vertical-align: top;
+}
+
+
 
 
 /*.subscribeLine {

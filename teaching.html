@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+
+		<script>
+
+
+$(function() {
+  $('#box1').hover(function() {
+    $('.teaching').css('background-color', '#764cc1');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.teaching').css('background-color', '');
+  });
+});
+
+$(function() {
+  $('#box2').hover(function() {
+    $('.teaching').css('background-color', '#acdce8');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.teaching').css('background-color', '');
+  });
+});
+
+
+
+		</script>
+
+	</head>
+
+
+	<body class="teaching">
+
+<main>
+
+	  <div class="box">Sophia Attigui<br>Teaching Portal</div></a>
+      <a class="teach" href="teaching-anti.html"><div id="box1" class="box">Anti-interface book</div></a>
+      <a class="teach" href="teaching-toolkit.html"><div id="box2" class="box">Toolkit ;--)))) part 1</div></a>
+      <a class="teach" href="http://extrapractice.space/"><div id="box3" class="box">Toolkit ;--)))) part 2</div></a>
+      <a class="teach" href="zines.index"><div class="box">Zine making<br>Workshops</div></a>
+</main>
+
+	</body>
